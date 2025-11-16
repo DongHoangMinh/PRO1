@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BH1750</title>
+</head>
+
+<body>
+  <h1>Giá trị của cảm biến:</h1>
+  <div id="lux">-- lux</div>
+  <div id="time">Last update: --:--:--</div>
+  <div id="status">Chưa có dữ liệu</div>
+  <button onclick="location.href='/filter'">Lọc dữ liệu</button>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+
+</body>
+
+</html>

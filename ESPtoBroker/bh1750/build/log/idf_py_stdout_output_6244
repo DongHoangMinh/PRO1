@@ -1,0 +1,590 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 17:30:50[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f1bch (127420) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=0002f1e4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002f208 vaddr=3ffb0000 size=00e10h (  3600) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=a2ccch (666828) map[0m
+[0;32mI (371) esp_image: segment 4: paddr=000d2cf4 vaddr=3ffb0e10 size=03268h ( 12904) load[0m
+[0;32mI (376) esp_image: segment 5: paddr=000d5f64 vaddr=40080000 size=18d7ch (101756) load[0m
+[0;32mI (428) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (428) boot: Disabling RNG early entropy source...[0m
+[0;32mI (438) cpu_start: Multicore app[0m
+[0;32mI (447) cpu_start: Pro cpu start user code[0m
+[0;32mI (447) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (447) app_init: Application information:[0m
+[0;32mI (447) app_init: Project name:     blink[0m
+[0;32mI (451) app_init: App version:      1[0m
+[0;32mI (454) app_init: Compile time:     Oct 28 2025 17:30:41[0m
+[0;32mI (459) app_init: ELF file SHA256:  1a069d7dc...[0m
+[0;32mI (464) app_init: ESP-IDF:          v5.4.2-dirty[0m
+[0;32mI (468) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (472) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (476) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (480) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (486) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFB8758 len 000278A8 (158 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 40098D7C len 00007284 (28 KiB): IRAM[0m
+[0;32mI (514) spi_flash: detected chip: generic[0m
+[0;32mI (516) spi_flash: flash io: dio[0m
+[0;33mW (519) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (530) main_task: Started on CPU0[0m
+[0;32mI (540) main_task: Calling app_main()[0m
+[0;32mI (560) Ctr: 📶 Khởi tạo WiFi...[0m
+[0;32mI (570) wifi:wifi driver task: 3ffc7b30, prio:23, stack:6656, core=0[0m
+[0;32mI (580) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (580) wifi:wifi certification version: v7.0[0m
+[0;32mI (580) wifi:config NVS flash: enabled[0m
+[0;32mI (580) wifi:config nano formatting: disabled[0m
+[0;32mI (580) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (590) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (590) wifi:Init management short buffer num: 32[0m
+[0;32mI (600) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (600) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (610) wifi:Init static rx buffer num: 10[0m
+[0;32mI (610) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (610) wifi_init: rx ba win: 6[0m
+[0;32mI (620) wifi_init: accept mbox: 6[0m
+[0;32mI (620) wifi_init: tcpip mbox: 32[0m
+[0;32mI (620) wifi_init: udp mbox: 6[0m
+[0;32mI (630) wifi_init: tcp mbox: 6[0m
+[0;32mI (630) wifi_init: tcp tx win: 5760[0m
+[0;32mI (630) wifi_init: tcp rx win: 5760[0m
+[0;32mI (630) wifi_init: tcp mss: 1440[0m
+[0;32mI (640) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (640) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (650) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (650) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (740) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (780) wifi:mode : sta (38:18:2b:e9:90:0c)[0m
+[0;32mI (780) wifi:enable tsf[0m
+[0;32mI (780) Ctr: WiFi init[0m
+[0;32mI (780) Ctr:  Đang chờ WiFi kết nối...[0m
+[0;32mI (800) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (800) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1800) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1810) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (1810) Ctr: Retrying WiFi... (1/1000)[0m
+[0;33mW (4230) Ctr: Retrying WiFi... (2/1000)[0m
+[0;32mI (4240) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4240) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4250) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4270) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4290) wifi:connected with E, aid = 1, channel 6, BW20, bssid = ee:df:76:3a:e3:c6[0m
+[0;32mI (4290) wifi:security: WPA2-PSK, phy: bgn, rssi: -20[0m
+[0;32mI (4290) wifi:pm start, type: 1[0m
+
+[0;32mI (4290) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4300) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (4310) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4320) wifi:<ba-add>idx:0 (ifx:0, ee:df:76:3a:e3:c6), tid:0, ssn:0, winSize:64[0m
+[0;32mI (5350) esp_netif_handlers: sta ip: 10.231.243.1, mask: 255.255.255.0, gw: 10.231.243.177[0m
+[0;32mI (5350) Ctr: WiFi got IP[0m
+[0;32mI (5350) Ctr: Đang đồng bộ thời gian NTP...[0m
+[0;32mI (5350) Ctr:  WiFi đã kết nối thành công![0m
+[0;32mI (5350) Ctr:  Khởi tạo I2C...[0m
+[0;32mI (5400) Ctr: ✅ Khởi tạo BH1750 thành công![0m
+[0;32mI (5400) Ctr: 📡 Khởi tạo MQTT...[0m
+[0;33mW (5400) Ctr: ⏸️ Thời gian chưa đồng bộ, bỏ qua đọc cảm biến[0m
+[0;32mI (5400) main_task: Returned from app_main()[0m
+[0;33mW (6400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (7350) Ctr:  Đã đồng bộ thời gian epoch: 6[0m
+[0;32mI (7350) Ctr: Reconnecting MQTT...[0m
+[0;32mI (7350) mqtt_client: Client force reconnect requested[0m
+[0;33mW (7400) Ctr: ⏸️ Thời gian chưa đồng bộ, bỏ qua đọc cảm biến[0m
+[0;33mW (8400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (9320) Ctr: MQTT CONNECTED[0m
+[0;32mI (9400) Ctr: Lux: 27.50, Time: 1762019141 (queued)[0m
+[0;32mI (10400) Ctr: Publish: {"lux": 1.96, "time": 0}[0m
+[0;32mI (10400) Ctr: Publish: {"lux": 27.50, "time": 1762019141}[0m
+[0;32mI (11400) Ctr: Lux: 27.50, Time: 1762019143 (queued)[0m
+[0;32mI (11400) Ctr: Publish: {"lux": 27.50, "time": 1762019143}[0m
+[0;33mW (12400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (13400) Ctr: Lux: 27.50, Time: 1762019145 (queued)[0m
+[0;32mI (14400) Ctr: Publish: {"lux": 27.50, "time": 1762019143}[0m
+[0;32mI (14400) Ctr: Publish: {"lux": 27.50, "time": 1762019145}[0m
+[0;33mW (15400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (15400) Ctr: Lux: 26.67, Time: 1762019147 (queued)[0m
+[0;32mI (17400) Ctr: Lux: 26.67, Time: 1762019149 (queued)[0m
+[0;32mI (17400) Ctr: Publish: {"lux": 27.50, "time": 1762019145}[0m
+[0;32mI (17400) Ctr: Publish: {"lux": 26.67, "time": 1762019147}[0m
+[0;32mI (17400) Ctr: Publish: {"lux": 26.67, "time": 1762019149}[0m
+[0;33mW (18410) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (19400) Ctr: Lux: 27.50, Time: 1762019151 (queued)[0m
+[0;32mI (20410) Ctr: Publish: {"lux": 26.67, "time": 1762019149}[0m
+[0;32mI (20410) Ctr: Publish: {"lux": 27.50, "time": 1762019151}[0m
+[0;32mI (21400) Ctr: Lux: 27.50, Time: 1762019153 (queued)[0m
+[0;32mI (21400) Ctr: Publish: {"lux": 27.50, "time": 1762019153}[0m
+[0;33mW (22400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (23400) Ctr: Lux: 27.50, Time: 1762019155 (queued)[0m
+[0;32mI (24400) Ctr: Publish: {"lux": 27.50, "time": 1762019153}[0m
+[0;32mI (24400) Ctr: Publish: {"lux": 27.50, "time": 1762019155}[0m
+[0;33mW (25400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (25400) Ctr: Lux: 27.50, Time: 1762019157 (queued)[0m
+[0;32mI (27400) Ctr: Lux: 27.50, Time: 1762019159 (queued)[0m
+[0;32mI (27400) Ctr: Publish: {"lux": 27.50, "time": 1762019155}[0m
+[0;32mI (27410) Ctr: Publish: {"lux": 27.50, "time": 1762019157}[0m
+[0;32mI (27410) Ctr: Publish: {"lux": 27.50, "time": 1762019159}[0m
+[0;33mW (28410) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (29400) Ctr: Lux: 27.50, Time: 1762019161 (queued)[0m
+[0;32mI (30410) Ctr: Publish: {"lux": 27.50, "time": 1762019159}[0m
+[0;32mI (30410) Ctr: Publish: {"lux": 27.50, "time": 1762019161}[0m
+[0;32mI (31400) Ctr: Lux: 27.50, Time: 1762019163 (queued)[0m
+[0;32mI (31400) Ctr: Publish: {"lux": 27.50, "time": 1762019163}[0m
+[0;33mW (32400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (33400) Ctr: Lux: 26.67, Time: 1762019165 (queued)[0m
+[0;32mI (33890) wifi:state: run -> init (0x1c0)[0m
+[0;32mI (33900) wifi:pm stop, total sleep time: 25206997 us / 29602165 us[0m
+
+[0;32mI (33900) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (33900) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (33910) transport_base: tcp_read error, errno=Software caused connection abort[0m
+[1;31mE (33910) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=113[0m
+[0;33mW (33910) Ctr: Retrying WiFi... (1/1000)[0m
+[1;31mE (33920) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;33mW (33930) Ctr: MQTT DISCONNECTED[0m
+[0;32mI (33990) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (33990) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (34090) wifi:state: auth -> init (0x3c0)[0m
+[0;32mI (34100) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (34100) Ctr: Retrying WiFi... (2/1000)[0m
+[0;33mW (34400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (35400) Ctr: Lux: 27.50, Time: 1762019167 (queued)[0m
+[0;33mW (36400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;33mW (36520) Ctr: Retrying WiFi... (3/1000)[0m
+[0;32mI (37400) Ctr: Lux: 27.50, Time: 1762019169 (queued)[0m
+[0;33mW (38400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;33mW (38930) Ctr: Retrying WiFi... (4/1000)[0m
+[0;32mI (39400) Ctr: Lux: 27.50, Time: 1762019171 (queued)[0m
+[0;33mW (40400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;33mW (41350) Ctr: Retrying WiFi... (5/1000)[0m
+[0;32mI (41400) Ctr: Lux: 27.50, Time: 1762019173 (queued)[0m
+[0;33mW (42400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (43400) Ctr: Lux: 27.50, Time: 1762019175 (queued)[0m
+[0;33mW (43760) Ctr: Retrying WiFi... (6/1000)[0m
+[0;33mW (44400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (45400) Ctr: Lux: 27.50, Time: 1762019177 (queued)[0m
+[0;33mW (46180) Ctr: Retrying WiFi... (7/1000)[0m
+[0;33mW (46400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (47400) Ctr: Lux: 27.50, Time: 1762019179 (queued)[0m
+[0;33mW (48400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;33mW (48590) Ctr: Retrying WiFi... (8/1000)[0m
+[1;31mE (48930) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (48930) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (48930) mqtt_client: Error transport connect[0m
+[0;33mW (48930) Ctr: MQTT DISCONNECTED[0m
+[0;32mI (49400) Ctr: Lux: 26.67, Time: 1762019181 (queued)[0m
+[0;33mW (50400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;33mW (51010) Ctr: Retrying WiFi... (9/1000)[0m
+[0;32mI (51020) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (51020) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (51400) Ctr: Lux: 26.67, Time: 1762019183 (queued)[0m
+[0;32mI (52030) wifi:state: auth -> init (0x200)[0m
+[0;32mI (52040) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (52040) Ctr: Retrying WiFi... (10/1000)[0m
+[0;33mW (52400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (53400) Ctr: Lux: 27.50, Time: 1762019185 (queued)[0m
+[0;33mW (54400) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;33mW (54460) Ctr: Retrying WiFi... (11/1000)[0m
+[0;32mI (54460) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (54460) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (54480) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (54490) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (54520) wifi:connected with E, aid = 1, channel 6, BW20, bssid = ee:df:76:3a:e3:c6[0m
+[0;32mI (54520) wifi:security: WPA2-PSK, phy: bgn, rssi: -35[0m
+[0;32mI (54520) wifi:pm start, type: 1[0m
+
+[0;32mI (54520) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (54530) wifi:<ba-add>idx:0 (ifx:0, ee:df:76:3a:e3:c6), tid:0, ssn:0, winSize:64[0m
+[0;32mI (54580) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (54580) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (55400) Ctr: Lux: 27.50, Time: 1762019187 (queued)[0m
+[0;32mI (55560) esp_netif_handlers: sta ip: 10.231.243.1, mask: 255.255.255.0, gw: 10.231.243.177[0m
+[0;32mI (55560) Ctr: WiFi got IP[0m
+[0;32mI (55560) Ctr: Đang đồng bộ thời gian NTP...[0m
+
+assert failed: sntp_setoperatingmode /IDF/components/lwip/lwip/src/apps/sntp/sntp.c:748 (Operating mode must not be set while SNTP client is running)
+
+
+Backtrace: 0x40081c51:0x3ffc40e0 0x4008a9c5:0x3ffc4100 0x40092801:0x3ffc4120 0x400e4c39:0x3ffc4240 0x400e44be:0x3ffc4260 0x400e46d1:0x3ffc4280 0x400e4731:0x3ffc42a0 0x4008b469:0x3ffc42d0
+
+
+
+
+ELF file SHA256: 1a069d7dc
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 17:30:50[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1f1bch (127420) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=0002f1e4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002f208 vaddr=3ffb0000 size=00e10h (  3600) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=a2ccch (666828) map[0m
+[0;32mI (371) esp_image: segment 4: paddr=000d2cf4 vaddr=3ffb0e10 size=03268h ( 12904) load[0m
+[0;32mI (376) esp_image: segment 5: paddr=000d5f64 vaddr=40080000 size=18d7ch (101756) load[0m
+[0;32mI (428) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (428) boot: Disabling RNG early entropy source...[0m
+[0;32mI (438) cpu_start: Multicore app[0m
+[0;32mI (447) cpu_start: Pro cpu start user code[0m
+[0;32mI (447) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (447) app_init: Application information:[0m
+[0;32mI (447) app_init: Project name:     blink[0m
+[0;32mI (451) app_init: App version:      1[0m
+[0;32mI (454) app_init: Compile time:     Oct 28 2025 17:30:41[0m
+[0;32mI (459) app_init: ELF file SHA256:  1a069d7dc...[0m
+[0;32mI (463) app_init: ESP-IDF:          v5.4.2-dirty[0m
+[0;32mI (468) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (471) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (475) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (480) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (486) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFB8758 len 000278A8 (158 KiB): DRAM[0m
+[0;32mI (496) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (501) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (507) heap_init: At 40098D7C len 00007284 (28 KiB): IRAM[0m
+[0;32mI (514) spi_flash: detected chip: generic[0m
+[0;32mI (516) spi_flash: flash io: dio[0m
+[0;33mW (519) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (529) main_task: Started on CPU0[0m
+[0;32mI (539) main_task: Calling app_main()[0m
+[0;32mI (559) Ctr: 📶 Khởi tạo WiFi...[0m
+[0;32mI (569) wifi:wifi driver task: 3ffc7bb4, prio:23, stack:6656, core=0[0m
+[0;32mI (579) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (579) wifi:wifi certification version: v7.0[0m
+[0;32mI (579) wifi:config NVS flash: enabled[0m
+[0;32mI (579) wifi:config nano formatting: disabled[0m
+[0;32mI (579) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (589) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (589) wifi:Init management short buffer num: 32[0m
+[0;32mI (599) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (599) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (609) wifi:Init static rx buffer num: 10[0m
+[0;32mI (609) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (609) wifi_init: rx ba win: 6[0m
+[0;32mI (619) wifi_init: accept mbox: 6[0m
+[0;32mI (619) wifi_init: tcpip mbox: 32[0m
+[0;32mI (619) wifi_init: udp mbox: 6[0m
+[0;32mI (629) wifi_init: tcp mbox: 6[0m
+[0;32mI (629) wifi_init: tcp tx win: 5760[0m
+[0;32mI (629) wifi_init: tcp rx win: 5760[0m
+[0;32mI (629) wifi_init: tcp mss: 1440[0m
+[0;32mI (639) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (639) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (649) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (649) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (739) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (779) wifi:mode : sta (38:18:2b:e9:90:0c)[0m
+[0;32mI (779) wifi:enable tsf[0m
+[0;32mI (779) Ctr: WiFi init[0m
+[0;32mI (779) Ctr:  Đang chờ WiFi kết nối...[0m
+[0;32mI (789) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (799) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1799) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1809) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (1809) Ctr: Retrying WiFi... (1/1000)[0m
+[0;33mW (4229) Ctr: Retrying WiFi... (2/1000)[0m
+[0;32mI (4239) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4239) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4249) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4259) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4279) wifi:connected with E, aid = 1, channel 6, BW20, bssid = ee:df:76:3a:e3:c6[0m
+[0;32mI (4279) wifi:security: WPA2-PSK, phy: bgn, rssi: -38[0m
+[0;32mI (4289) wifi:pm start, type: 1[0m
+
+[0;32mI (4289) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4299) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (4299) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4309) wifi:<ba-add>idx:0 (ifx:0, ee:df:76:3a:e3:c6), tid:0, ssn:0, winSize:64[0m
+[0;32mI (5349) esp_netif_handlers: sta ip: 10.231.243.1, mask: 255.255.255.0, gw: 10.231.243.177[0m
+[0;32mI (5349) Ctr: WiFi got IP[0m
+[0;32mI (5349) Ctr: Đang đồng bộ thời gian NTP...[0m
+[0;32mI (5349) Ctr:  WiFi đã kết nối thành công![0m
+[0;32mI (5349) Ctr:  Khởi tạo I2C...[0m
+[0;32mI (5399) Ctr: ✅ Khởi tạo BH1750 thành công![0m
+[0;32mI (5399) Ctr: 📡 Khởi tạo MQTT...[0m
+[0;32mI (5399) main_task: Returned from app_main()[0m
+[0;33mW (5399) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (5399) Ctr: Lux: 0.00, Time: 1762019192 (queued)[0m
+[0;32mI (7279) Ctr: MQTT CONNECTED[0m
+[0;32mI (7349) Ctr:  Đã đồng bộ thời gian epoch: 1762019194[0m
+[0;32mI (7399) Ctr: Publish: {"lux": 0.00, "time": 1762019192}[0m
+[0;32mI (7409) Ctr: Lux: 27.50, Time: 1762019194 (queued)[0m
+[0;32mI (7409) Ctr: Publish: {"lux": 27.50, "time": 1762019194}[0m
+[0;33mW (8409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (9409) Ctr: Lux: 27.50, Time: 1762019196 (queued)[0m
+[0;32mI (10409) Ctr: Publish: {"lux": 27.50, "time": 1762019194}[0m
+[0;32mI (10409) Ctr: Publish: {"lux": 27.50, "time": 1762019196}[0m
+[0;32mI (11409) Ctr: Lux: 27.50, Time: 1762019198 (queued)[0m
+[0;32mI (11409) Ctr: Publish: {"lux": 27.50, "time": 1762019198}[0m
+[0;33mW (12409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (13409) Ctr: Lux: 27.50, Time: 1762019200 (queued)[0m
+[0;32mI (14409) Ctr: Publish: {"lux": 27.50, "time": 1762019198}[0m
+[0;32mI (14409) Ctr: Publish: {"lux": 27.50, "time": 1762019200}[0m
+[0;33mW (15409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (15409) Ctr: Lux: 27.50, Time: 1762019202 (queued)[0m
+[0;32mI (17409) Ctr: Lux: 27.50, Time: 1762019204 (queued)[0m
+[0;32mI (17409) Ctr: Publish: {"lux": 27.50, "time": 1762019200}[0m
+[0;32mI (17419) Ctr: Publish: {"lux": 27.50, "time": 1762019202}[0m
+[0;32mI (17419) Ctr: Publish: {"lux": 27.50, "time": 1762019204}[0m
+[0;33mW (18419) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (19409) Ctr: Lux: 27.50, Time: 1762019206 (queued)[0m
+[0;32mI (20419) Ctr: Publish: {"lux": 27.50, "time": 1762019204}[0m
+[0;32mI (20419) Ctr: Publish: {"lux": 27.50, "time": 1762019206}[0m
+[0;32mI (21409) Ctr: Lux: 27.50, Time: 1762019208 (queued)[0m
+[0;32mI (21409) Ctr: Publish: {"lux": 27.50, "time": 1762019208}[0m
+[0;33mW (22409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (23409) Ctr: Lux: 27.50, Time: 1762019210 (queued)[0m
+[0;32mI (24409) Ctr: Publish: {"lux": 27.50, "time": 1762019208}[0m
+[0;32mI (24409) Ctr: Publish: {"lux": 27.50, "time": 1762019210}[0m
+[0;32mI (25409) Ctr: Lux: 28.33, Time: 1762019212 (queued)[0m
+[0;32mI (25409) Ctr: Publish: {"lux": 28.33, "time": 1762019212}[0m
+[0;33mW (26409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (27409) Ctr: Lux: 27.50, Time: 1762019214 (queued)[0m
+[0;32mI (28409) Ctr: Publish: {"lux": 28.33, "time": 1762019212}[0m
+[0;32mI (28409) Ctr: Publish: {"lux": 27.50, "time": 1762019214}[0m
+[0;33mW (29409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (29409) Ctr: Lux: 27.50, Time: 1762019216 (queued)[0m
+[0;32mI (31409) Ctr: Lux: 27.50, Time: 1762019218 (queued)[0m
+[0;32mI (31409) Ctr: Publish: {"lux": 27.50, "time": 1762019214}[0m
+[0;32mI (31419) Ctr: Publish: {"lux": 27.50, "time": 1762019216}[0m
+[0;32mI (31419) Ctr: Publish: {"lux": 27.50, "time": 1762019218}[0m
+[0;33mW (32419) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (33409) Ctr: Lux: 27.50, Time: 1762019220 (queued)[0m
+[0;32mI (34419) Ctr: Publish: {"lux": 27.50, "time": 1762019218}[0m
+[0;32mI (34419) Ctr: Publish: {"lux": 27.50, "time": 1762019220}[0m
+[0;32mI (35409) Ctr: Lux: 27.50, Time: 1762019222 (queued)[0m
+[0;32mI (35409) Ctr: Publish: {"lux": 27.50, "time": 1762019222}[0m
+[0;33mW (36409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (37409) Ctr: Lux: 27.50, Time: 1762019224 (queued)[0m
+[0;32mI (38409) Ctr: Publish: {"lux": 27.50, "time": 1762019222}[0m
+[0;32mI (38409) Ctr: Publish: {"lux": 27.50, "time": 1762019224}[0m
+[0;32mI (39409) Ctr: Lux: 27.50, Time: 1762019226 (queued)[0m
+[0;32mI (39409) Ctr: Publish: {"lux": 27.50, "time": 1762019226}[0m
+[0;33mW (40409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (41409) Ctr: Lux: 27.50, Time: 1762019228 (queued)[0m
+[0;32mI (42409) Ctr: Publish: {"lux": 27.50, "time": 1762019226}[0m
+[0;32mI (42409) Ctr: Publish: {"lux": 27.50, "time": 1762019228}[0m
+[0;33mW (43409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (43409) Ctr: Lux: 27.50, Time: 1762019230 (queued)[0m
+[0;32mI (45409) Ctr: Lux: 27.50, Time: 1762019232 (queued)[0m
+[0;32mI (45409) Ctr: Publish: {"lux": 27.50, "time": 1762019228}[0m
+[0;32mI (45409) Ctr: Publish: {"lux": 27.50, "time": 1762019230}[0m
+[0;32mI (45419) Ctr: Publish: {"lux": 27.50, "time": 1762019232}[0m
+[0;33mW (46419) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (47409) Ctr: Lux: 27.50, Time: 1762019234 (queued)[0m
+[0;32mI (48419) Ctr: Publish: {"lux": 27.50, "time": 1762019232}[0m
+[0;32mI (48429) Ctr: Publish: {"lux": 27.50, "time": 1762019234}[0m
+[0;32mI (49409) Ctr: Lux: 28.33, Time: 1762019236 (queued)[0m
+[0;32mI (49409) Ctr: Publish: {"lux": 28.33, "time": 1762019236}[0m
+[0;33mW (50409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (51409) Ctr: Lux: 28.33, Time: 1762019238 (queued)[0m
+[0;32mI (52409) Ctr: Publish: {"lux": 28.33, "time": 1762019236}[0m
+[0;32mI (52409) Ctr: Publish: {"lux": 28.33, "time": 1762019238}[0m
+[0;33mW (53409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (53409) Ctr: Lux: 28.33, Time: 1762019240 (queued)[0m
+[0;32mI (55409) Ctr: Lux: 28.33, Time: 1762019242 (queued)[0m
+[0;32mI (55409) Ctr: Publish: {"lux": 28.33, "time": 1762019238}[0m
+[0;32mI (55409) Ctr: Publish: {"lux": 28.33, "time": 1762019240}[0m
+[0;32mI (55419) Ctr: Publish: {"lux": 28.33, "time": 1762019242}[0m
+[0;33mW (56419) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (57409) Ctr: Lux: 28.33, Time: 1762019244 (queued)[0m
+[0;32mI (58419) Ctr: Publish: {"lux": 28.33, "time": 1762019242}[0m
+[0;32mI (58419) Ctr: Publish: {"lux": 28.33, "time": 1762019244}[0m
+[0;32mI (59409) Ctr: Lux: 28.33, Time: 1762019246 (queued)[0m
+[0;32mI (59409) Ctr: Publish: {"lux": 28.33, "time": 1762019246}[0m
+[0;33mW (60409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (61409) Ctr: Lux: 26.67, Time: 1762019248 (queued)[0m
+[0;32mI (62409) Ctr: Publish: {"lux": 28.33, "time": 1762019246}[0m
+[0;32mI (62409) Ctr: Publish: {"lux": 26.67, "time": 1762019248}[0m
+[0;32mI (63409) Ctr: Lux: 27.50, Time: 1762019250 (queued)[0m
+[0;32mI (63409) Ctr: Publish: {"lux": 27.50, "time": 1762019250}[0m
+[0;33mW (64409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (65409) Ctr: Lux: 27.50, Time: 1762019252 (queued)[0m
+[0;32mI (66409) Ctr: Publish: {"lux": 27.50, "time": 1762019250}[0m
+[0;32mI (66419) Ctr: Publish: {"lux": 27.50, "time": 1762019252}[0m
+[0;32mI (67409) Ctr: Lux: 27.50, Time: 1762019254 (queued)[0m
+[0;32mI (67409) Ctr: Publish: {"lux": 27.50, "time": 1762019254}[0m
+[0;33mW (68409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (69409) Ctr: Lux: 26.67, Time: 1762019256 (queued)[0m
+[0;32mI (70409) Ctr: Publish: {"lux": 27.50, "time": 1762019254}[0m
+[0;32mI (70409) Ctr: Publish: {"lux": 26.67, "time": 1762019256}[0m
+[0;33mW (71409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (71409) Ctr: Lux: 26.67, Time: 1762019258 (queued)[0m
+[0;32mI (73409) Ctr: Lux: 26.67, Time: 1762019260 (queued)[0m
+[0;32mI (73409) Ctr: Publish: {"lux": 26.67, "time": 1762019256}[0m
+[0;32mI (73419) Ctr: Publish: {"lux": 26.67, "time": 1762019258}[0m
+[0;32mI (73419) Ctr: Publish: {"lux": 26.67, "time": 1762019260}[0m
+[0;33mW (74419) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (75409) Ctr: Lux: 27.50, Time: 1762019262 (queued)[0m
+[0;32mI (76419) Ctr: Publish: {"lux": 26.67, "time": 1762019260}[0m
+[0;32mI (76429) Ctr: Publish: {"lux": 27.50, "time": 1762019262}[0m
+[0;32mI (77409) Ctr: Lux: 26.67, Time: 1762019264 (queued)[0m
+[0;32mI (77409) Ctr: Publish: {"lux": 26.67, "time": 1762019264}[0m
+[0;33mW (78409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (79409) Ctr: Lux: 26.67, Time: 1762019266 (queued)[0m
+[0;32mI (80409) Ctr: Publish: {"lux": 26.67, "time": 1762019264}[0m
+[0;32mI (80409) Ctr: Publish: {"lux": 26.67, "time": 1762019266}[0m
+[0;32mI (81409) Ctr: Lux: 26.67, Time: 1762019268 (queued)[0m
+[0;32mI (81409) Ctr: Publish: {"lux": 26.67, "time": 1762019268}[0m
+[0;33mW (82409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (83409) Ctr: Lux: 26.67, Time: 1762019270 (queued)[0m
+[0;32mI (84409) Ctr: Publish: {"lux": 26.67, "time": 1762019268}[0m
+[0;32mI (84409) Ctr: Publish: {"lux": 26.67, "time": 1762019270}[0m
+[0;33mW (85409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (85409) Ctr: Lux: 26.67, Time: 1762019272 (queued)[0m
+[0;32mI (87409) Ctr: Lux: 26.67, Time: 1762019274 (queued)[0m
+[0;32mI (87409) Ctr: Publish: {"lux": 26.67, "time": 1762019270}[0m
+[0;32mI (87409) Ctr: Publish: {"lux": 26.67, "time": 1762019272}[0m
+[0;32mI (87419) Ctr: Publish: {"lux": 26.67, "time": 1762019274}[0m
+[0;33mW (88419) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (89409) Ctr: Lux: 26.67, Time: 1762019276 (queued)[0m
+[0;32mI (90419) Ctr: Publish: {"lux": 26.67, "time": 1762019274}[0m
+[0;32mI (90429) Ctr: Publish: {"lux": 26.67, "time": 1762019276}[0m
+[0;32mI (91409) Ctr: Lux: 26.67, Time: 1762019278 (queued)[0m
+[0;32mI (91409) Ctr: Publish: {"lux": 26.67, "time": 1762019278}[0m
+[0;33mW (92409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (93409) Ctr: Lux: 26.67, Time: 1762019280 (queued)[0m
+[0;32mI (94409) Ctr: Publish: {"lux": 26.67, "time": 1762019278}[0m
+[0;32mI (94409) Ctr: Publish: {"lux": 26.67, "time": 1762019280}[0m
+[0;33mW (95409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (95409) Ctr: Lux: 26.67, Time: 1762019282 (queued)[0m
+[0;32mI (97409) Ctr: Lux: 26.67, Time: 1762019284 (queued)[0m
+[0;32mI (97409) Ctr: Publish: {"lux": 26.67, "time": 1762019280}[0m
+[0;32mI (97409) Ctr: Publish: {"lux": 26.67, "time": 1762019282}[0m
+[0;32mI (97419) Ctr: Publish: {"lux": 26.67, "time": 1762019284}[0m
+[0;33mW (98419) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (99409) Ctr: Lux: 26.67, Time: 1762019286 (queued)[0m
+[0;32mI (100419) Ctr: Publish: {"lux": 26.67, "time": 1762019284}[0m
+[0;32mI (100419) Ctr: Publish: {"lux": 26.67, "time": 1762019286}[0m
+[0;32mI (101409) Ctr: Lux: 26.67, Time: 1762019288 (queued)[0m
+[0;32mI (101409) Ctr: Publish: {"lux": 26.67, "time": 1762019288}[0m
+[0;33mW (102409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (103409) Ctr: Lux: 27.50, Time: 1762019290 (queued)[0m
+[0;32mI (104409) Ctr: Publish: {"lux": 26.67, "time": 1762019288}[0m
+[0;32mI (104409) Ctr: Publish: {"lux": 27.50, "time": 1762019290}[0m
+[0;32mI (105409) Ctr: Lux: 30.83, Time: 1762019292 (queued)[0m
+[0;32mI (105409) Ctr: Publish: {"lux": 30.83, "time": 1762019292}[0m
+[0;33mW (106409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (107409) Ctr: Lux: 30.83, Time: 1762019294 (queued)[0m
+[0;32mI (108409) Ctr: Publish: {"lux": 30.83, "time": 1762019292}[0m
+[0;32mI (108409) Ctr: Publish: {"lux": 30.83, "time": 1762019294}[0m
+[0;33mW (109409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (109409) Ctr: Lux: 30.83, Time: 1762019296 (queued)[0m
+[0;32mI (111409) Ctr: Lux: 30.83, Time: 1762019298 (queued)[0m
+[0;32mI (111409) Ctr: Publish: {"lux": 30.83, "time": 1762019294}[0m
+[0;32mI (111409) Ctr: Publish: {"lux": 30.83, "time": 1762019296}[0m
+[0;32mI (111419) Ctr: Publish: {"lux": 30.83, "time": 1762019298}[0m
+[0;33mW (112419) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (113409) Ctr: Lux: 30.83, Time: 1762019300 (queued)[0m
+[0;32mI (114419) Ctr: Publish: {"lux": 30.83, "time": 1762019298}[0m
+[0;32mI (114419) Ctr: Publish: {"lux": 30.83, "time": 1762019300}[0m
+[0;32mI (115409) Ctr: Lux: 30.83, Time: 1762019302 (queued)[0m
+[0;32mI (115409) Ctr: Publish: {"lux": 30.83, "time": 1762019302}[0m
+[0;33mW (116409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (117409) Ctr: Lux: 30.83, Time: 1762019304 (queued)[0m
+[0;32mI (118409) Ctr: Publish: {"lux": 30.83, "time": 1762019302}[0m
+[0;32mI (118409) Ctr: Publish: {"lux": 30.83, "time": 1762019304}[0m
+[0;33mW (119409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (119409) Ctr: Lux: 30.83, Time: 1762019306 (queued)[0m
+[0;32mI (121409) Ctr: Lux: 30.83, Time: 1762019308 (queued)[0m
+[0;32mI (121409) Ctr: Publish: {"lux": 30.83, "time": 1762019304}[0m
+[0;32mI (121419) Ctr: Publish: {"lux": 30.83, "time": 1762019306}[0m
+[0;32mI (121419) Ctr: Publish: {"lux": 30.83, "time": 1762019308}[0m
+[0;33mW (122419) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (123409) Ctr: Lux: 30.83, Time: 1762019310 (queued)[0m
+[0;32mI (124419) Ctr: Publish: {"lux": 30.83, "time": 1762019308}[0m
+[0;32mI (124429) Ctr: Publish: {"lux": 30.83, "time": 1762019310}[0m
+[0;32mI (125409) Ctr: Lux: 30.83, Time: 1762019312 (queued)[0m
+[0;32mI (125409) Ctr: Publish: {"lux": 30.83, "time": 1762019312}[0m
+[0;33mW (126409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (127409) Ctr: Lux: 30.83, Time: 1762019314 (queued)[0m
+[0;32mI (128409) Ctr: Publish: {"lux": 30.83, "time": 1762019312}[0m
+[0;32mI (128419) Ctr: Publish: {"lux": 30.83, "time": 1762019314}[0m
+[0;32mI (129409) Ctr: Lux: 30.83, Time: 1762019316 (queued)[0m
+[0;32mI (129409) Ctr: Publish: {"lux": 30.83, "time": 1762019316}[0m
+[0;33mW (130409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (131409) Ctr: Lux: 27.50, Time: 1762019318 (queued)[0m
+[0;32mI (132409) Ctr: Publish: {"lux": 30.83, "time": 1762019316}[0m
+[0;32mI (132409) Ctr: Publish: {"lux": 27.50, "time": 1762019318}[0m
+[0;33mW (133409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (133409) Ctr: Lux: 27.50, Time: 1762019320 (queued)[0m
+[0;32mI (135409) Ctr: Lux: 27.50, Time: 1762019322 (queued)[0m
+[0;32mI (135409) Ctr: Publish: {"lux": 27.50, "time": 1762019318}[0m
+[0;32mI (135409) Ctr: Publish: {"lux": 27.50, "time": 1762019320}[0m
+[0;32mI (135419) Ctr: Publish: {"lux": 27.50, "time": 1762019322}[0m
+[0;33mW (136419) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (137409) Ctr: Lux: 27.50, Time: 1762019324 (queued)[0m
+[0;32mI (138419) Ctr: Publish: {"lux": 27.50, "time": 1762019322}[0m
+[0;32mI (138419) Ctr: Publish: {"lux": 27.50, "time": 1762019324}[0m
+[0;32mI (139409) Ctr: Lux: 27.50, Time: 1762019326 (queued)[0m
+[0;32mI (139409) Ctr: Publish: {"lux": 27.50, "time": 1762019326}[0m
+[0;33mW (140409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (141409) Ctr: Lux: 27.50, Time: 1762019328 (queued)[0m
+[0;32mI (142409) Ctr: Publish: {"lux": 27.50, "time": 1762019326}[0m
+[0;32mI (142409) Ctr: Publish: {"lux": 27.50, "time": 1762019328}[0m
+[0;32mI (143409) Ctr: Lux: 27.50, Time: 1762019330 (queued)[0m
+[0;32mI (143409) Ctr: Publish: {"lux": 27.50, "time": 1762019330}[0m
+[0;33mW (144409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (145409) Ctr: Lux: 28.33, Time: 1762019332 (queued)[0m
+[0;32mI (146409) Ctr: Publish: {"lux": 27.50, "time": 1762019330}[0m
+[0;32mI (146409) Ctr: Publish: {"lux": 28.33, "time": 1762019332}[0m
+[0;33mW (147409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (147409) Ctr: Lux: 28.33, Time: 1762019334 (queued)[0m
+[0;32mI (149409) Ctr: Lux: 28.33, Time: 1762019336 (queued)[0m
+[0;32mI (149409) Ctr: Publish: {"lux": 28.33, "time": 1762019332}[0m
+[0;32mI (149409) Ctr: Publish: {"lux": 28.33, "time": 1762019334}[0m
+[0;32mI (149419) Ctr: Publish: {"lux": 28.33, "time": 1762019336}[0m
+[0;33mW (150419) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m
+[0;32mI (151409) Ctr: Lux: 28.33, Time: 1762019338 (queued)[0m
+[0;32mI (152419) Ctr: Publish: {"lux": 28.33, "time": 1762019336}[0m
+[0;32mI (152419) Ctr: Publish: {"lux": 28.33, "time": 1762019338}[0m
+[0;32mI (153409) Ctr: Lux: 28.33, Time: 1762019340 (queued)[0m
+[0;32mI (153409) Ctr: Publish: {"lux": 28.33, "time": 1762019340}[0m
+[0;33mW (154409) Ctr: MQTT chưa kết nối, giữ lại dữ liệu để gửi sau[0m

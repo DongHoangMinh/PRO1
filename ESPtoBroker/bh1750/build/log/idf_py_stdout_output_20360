@@ -1,0 +1,534 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 17:30:50[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1edech (126444) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=0002ee14 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002ee38 vaddr=3ffb0000 size=011e0h (  4576) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=9fc84h (654468) map[0m
+[0;32mI (367) esp_image: segment 4: paddr=000cfcac vaddr=3ffb11e0 size=02e38h ( 11832) load[0m
+[0;32mI (371) esp_image: segment 5: paddr=000d2aec vaddr=40080000 size=18d54h (101716) load[0m
+[0;32mI (423) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (423) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (442) cpu_start: Pro cpu start user code[0m
+[0;32mI (442) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (442) app_init: Application information:[0m
+[0;32mI (442) app_init: Project name:     blink[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (449) app_init: Compile time:     Oct 28 2025 17:30:41[0m
+[0;32mI (454) app_init: ELF file SHA256:  4f4985878...[0m
+[0;32mI (459) app_init: ESP-IDF:          v5.4.2-dirty[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB86E0 len 00027920 (158 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 40098D54 len 000072AC (28 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (511) spi_flash: flash io: dio[0m
+[0;33mW (514) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (525) main_task: Started on CPU0[0m
+[0;32mI (535) main_task: Calling app_main()[0m
+[0;32mI (565) wifi:wifi driver task: 3ffc7b3c, prio:23, stack:6656, core=0[0m
+[0;32mI (575) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (575) wifi:wifi certification version: v7.0[0m
+[0;32mI (575) wifi:config NVS flash: enabled[0m
+[0;32mI (575) wifi:config nano formatting: disabled[0m
+[0;32mI (585) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (585) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (585) wifi:Init management short buffer num: 32[0m
+[0;32mI (595) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (595) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (605) wifi:Init static rx buffer num: 10[0m
+[0;32mI (605) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (615) wifi_init: rx ba win: 6[0m
+[0;32mI (615) wifi_init: accept mbox: 6[0m
+[0;32mI (615) wifi_init: tcpip mbox: 32[0m
+[0;32mI (615) wifi_init: udp mbox: 6[0m
+[0;32mI (625) wifi_init: tcp mbox: 6[0m
+[0;32mI (625) wifi_init: tcp tx win: 5760[0m
+[0;32mI (625) wifi_init: tcp rx win: 5760[0m
+[0;32mI (625) wifi_init: tcp mss: 1440[0m
+[0;32mI (635) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (635) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (645) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (645) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (735) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (775) wifi:mode : sta (38:18:2b:e9:90:0c)[0m
+[0;32mI (775) wifi:enable tsf[0m
+[0;32mI (775) Ctr: WiFi init[0m
+[0;32mI (785) Ctr: Khởi tạo I2C và BH1750 thành công[0m
+[1;31mE (785) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (785) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (795) mqtt_client: Error transport connect[0m
+[0;33mW (795) Ctr: MQTT DISCONNECTED[0m
+[0;32mI (805) main_task: Returned from app_main()[0m
+[0;32mI (805) Ctr: Đã publish: {"lux": 0.00, "time": 0}[0m
+[0;32mI (805) Ctr: Lux: 0.00, Time: 0 (queued)[0m
+[0;32mI (815) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (825) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (845) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (885) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (935) wifi:connected with E, aid = 1, channel 6, BW20, bssid = ee:df:76:3a:e3:c6[0m
+[0;32mI (945) wifi:security: WPA2-PSK, phy: bgn, rssi: -48[0m
+[0;32mI (945) wifi:pm start, type: 1[0m
+
+[0;32mI (945) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (975) wifi:<ba-add>idx:0 (ifx:0, ee:df:76:3a:e3:c6), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1125) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (1125) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (2025) esp_netif_handlers: sta ip: 10.185.179.1, mask: 255.255.255.0, gw: 10.185.179.162[0m
+[0;32mI (2025) Ctr: WiFi got IP[0m
+[0;32mI (2025) Ctr: Đang đồng bộ thời gian NTP...[0m
+[0;32mI (2025) Ctr: Reconnecting MQTT...[0m
+[0;32mI (2025) mqtt_client: Client force reconnect requested[0m
+[0;32mI (2815) Ctr: Lux: 522.50, Time: 2 (queued)[0m
+[0;32mI (3175) Ctr: MQTT CONNECTED[0m
+[0;32mI (3175) Ctr: Đã publish: {"lux": 522.50, "time": 2}[0m
+[0;32mI (4815) Ctr: Đã publish: {"lux": 522.50, "time": 4}[0m
+[0;32mI (4815) Ctr: Lux: 522.50, Time: 4 (queued)[0m
+[0;32mI (6815) Ctr: Đã publish: {"lux": 522.50, "time": 6}[0m
+[0;32mI (6815) Ctr: Lux: 522.50, Time: 6 (queued)[0m
+[0;32mI (8815) Ctr: Đã publish: {"lux": 522.50, "time": 1762246345}[0m
+[0;32mI (8815) Ctr: Lux: 522.50, Time: 1762246345 (queued)[0m
+[0;32mI (10815) Ctr: Đã publish: {"lux": 522.50, "time": 1762246347}[0m
+[0;32mI (10815) Ctr: Lux: 522.50, Time: 1762246347 (queued)[0m
+[0;32mI (12815) Ctr: Đã publish: {"lux": 521.67, "time": 1762246349}[0m
+[0;32mI (12815) Ctr: Lux: 521.67, Time: 1762246349 (queued)[0m
+[0;32mI (14815) Ctr: Đã publish: {"lux": 521.67, "time": 1762246351}[0m
+[0;32mI (14815) Ctr: Lux: 521.67, Time: 1762246351 (queued)[0m
+[0;32mI (16815) Ctr: Đã publish: {"lux": 521.67, "time": 1762246353}[0m
+[0;32mI (16815) Ctr: Lux: 521.67, Time: 1762246353 (queued)[0m
+[0;32mI (18815) Ctr: Đã publish: {"lux": 522.50, "time": 1762246355}[0m
+[0;32mI (18815) Ctr: Lux: 522.50, Time: 1762246355 (queued)[0m
+[0;32mI (20815) Ctr: Đã publish: {"lux": 521.67, "time": 1762246357}[0m
+[0;32mI (20815) Ctr: Lux: 521.67, Time: 1762246357 (queued)[0m
+[0;32mI (22815) Ctr: Đã publish: {"lux": 521.67, "time": 1762246359}[0m
+[0;32mI (22815) Ctr: Lux: 521.67, Time: 1762246359 (queued)[0m
+[0;32mI (24815) Ctr: Đã publish: {"lux": 521.67, "time": 1762246361}[0m
+[0;32mI (24815) Ctr: Lux: 521.67, Time: 1762246361 (queued)[0m
+[0;32mI (26815) Ctr: Đã publish: {"lux": 522.50, "time": 1762246363}[0m
+[0;32mI (26815) Ctr: Lux: 522.50, Time: 1762246363 (queued)[0m
+[0;32mI (27765) wifi:state: run -> init (0x1c0)[0m
+[0;32mI (27775) wifi:pm stop, total sleep time: 21050156 us / 26826794 us[0m
+
+[0;32mI (27775) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (27775) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (27785) transport_base: tcp_read error, errno=Software caused connection abort[0m
+[1;31mE (27785) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=113[0m
+[0;33mW (27785) Ctr: Retrying WiFi... (1/1000)[0m
+[1;31mE (27795) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;33mW (27805) Ctr: MQTT DISCONNECTED[0m
+[0;32mI (27855) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (27855) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (27945) wifi:state: auth -> init (0x3c0)[0m
+[0;32mI (27965) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (27965) Ctr: Retrying WiFi... (2/1000)[0m
+[0;32mI (28815) Ctr: Đã publish: {"lux": 521.67, "time": 1762246365}[0m
+[0;32mI (28815) Ctr: Lux: 521.67, Time: 1762246365 (queued)[0m
+[0;33mW (30385) Ctr: Retrying WiFi... (3/1000)[0m
+[0;32mI (30815) Ctr: Đã publish: {"lux": 522.50, "time": 1762246367}[0m
+[0;32mI (30815) Ctr: Lux: 522.50, Time: 1762246367 (queued)[0m
+[0;33mW (32795) Ctr: Retrying WiFi... (4/1000)[0m
+[0;32mI (32815) Ctr: Đã publish: {"lux": 521.67, "time": 1762246369}[0m
+[0;32mI (32815) Ctr: Lux: 521.67, Time: 1762246369 (queued)[0m
+[0;32mI (34815) Ctr: Đã publish: {"lux": 521.67, "time": 1762246371}[0m
+[0;32mI (34815) Ctr: Lux: 521.67, Time: 1762246371 (queued)[0m
+[0;33mW (35215) Ctr: Retrying WiFi... (5/1000)[0m
+[0;32mI (36815) Ctr: Đã publish: {"lux": 521.67, "time": 1762246373}[0m
+[0;32mI (36815) Ctr: Lux: 521.67, Time: 1762246373 (queued)[0m
+[0;33mW (37635) Ctr: Retrying WiFi... (6/1000)[0m
+[0;32mI (37655) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (37655) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (37715) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (37755) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (37855) wifi:connected with E, aid = 1, channel 6, BW20, bssid = ee:df:76:3a:e3:c6[0m
+[0;32mI (37855) wifi:security: WPA2-PSK, phy: bgn, rssi: -21[0m
+[0;32mI (37855) wifi:pm start, type: 1[0m
+
+[0;32mI (37855) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (37875) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (37875) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (37915) wifi:<ba-add>idx:0 (ifx:0, ee:df:76:3a:e3:c6), tid:0, ssn:0, winSize:64[0m
+[0;32mI (38815) Ctr: Đã publish: {"lux": 522.50, "time": 1762246375}[0m
+[0;32mI (38815) Ctr: Lux: 522.50, Time: 1762246375 (queued)[0m
+[0;32mI (38955) esp_netif_handlers: sta ip: 10.185.179.1, mask: 255.255.255.0, gw: 10.185.179.162[0m
+[0;32mI (38955) Ctr: WiFi got IP[0m
+[0;32mI (38955) Ctr: Đang đồng bộ thời gian NTP...[0m
+
+assert failed: sntp_setoperatingmode /IDF/components/lwip/lwip/src/apps/sntp/sntp.c:748 (Operating mode must not be set while SNTP client is running)
+
+
+Backtrace: 0x40081c51:0x3ffc40e0 0x4008a99d:0x3ffc4100 0x400927d9:0x3ffc4120 0x400e4ad1:0x3ffc4240 0x400e4356:0x3ffc4260 0x400e4569:0x3ffc4280 0x400e45c9:0x3ffc42a0 0x4008b441:0x3ffc42d0
+
+
+
+
+ELF file SHA256: 4f4985878
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 17:30:50[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1edech (126444) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=0002ee14 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002ee38 vaddr=3ffb0000 size=011e0h (  4576) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=9fc84h (654468) map[0m
+[0;32mI (367) esp_image: segment 4: paddr=000cfcac vaddr=3ffb11e0 size=02e38h ( 11832) load[0m
+[0;32mI (371) esp_image: segment 5: paddr=000d2aec vaddr=40080000 size=18d54h (101716) load[0m
+[0;32mI (423) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (423) boot: Disabling RNG early entropy source...[0m
+[0;32mI (433) cpu_start: Multicore app[0m
+[0;32mI (442) cpu_start: Pro cpu start user code[0m
+[0;32mI (442) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (442) app_init: Application information:[0m
+[0;32mI (442) app_init: Project name:     blink[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (449) app_init: Compile time:     Oct 28 2025 17:30:41[0m
+[0;32mI (454) app_init: ELF file SHA256:  4f4985878...[0m
+[0;32mI (458) app_init: ESP-IDF:          v5.4.2-dirty[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB86E0 len 00027920 (158 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (496) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 40098D54 len 000072AC (28 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (511) spi_flash: flash io: dio[0m
+[0;33mW (514) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (524) main_task: Started on CPU0[0m
+[0;32mI (534) main_task: Calling app_main()[0m
+[0;32mI (564) wifi:wifi driver task: 3ffc7ab8, prio:23, stack:6656, core=0[0m
+[0;32mI (574) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (574) wifi:wifi certification version: v7.0[0m
+[0;32mI (574) wifi:config NVS flash: enabled[0m
+[0;32mI (574) wifi:config nano formatting: disabled[0m
+[0;32mI (584) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (584) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (584) wifi:Init management short buffer num: 32[0m
+[0;32mI (594) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (594) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (604) wifi:Init static rx buffer num: 10[0m
+[0;32mI (604) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (614) wifi_init: rx ba win: 6[0m
+[0;32mI (614) wifi_init: accept mbox: 6[0m
+[0;32mI (614) wifi_init: tcpip mbox: 32[0m
+[0;32mI (614) wifi_init: udp mbox: 6[0m
+[0;32mI (624) wifi_init: tcp mbox: 6[0m
+[0;32mI (624) wifi_init: tcp tx win: 5760[0m
+[0;32mI (624) wifi_init: tcp rx win: 5760[0m
+[0;32mI (624) wifi_init: tcp mss: 1440[0m
+[0;32mI (634) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (634) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (644) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (644) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (734) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (764) wifi:mode : sta (38:18:2b:e9:90:0c)[0m
+[0;32mI (764) wifi:enable tsf[0m
+[0;32mI (764) Ctr: WiFi init[0m
+[0;32mI (774) Ctr: Khởi tạo I2C và BH1750 thành công[0m
+[1;31mE (774) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (774) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (784) mqtt_client: Error transport connect[0m
+[0;33mW (784) Ctr: MQTT DISCONNECTED[0m
+[0;32mI (794) main_task: Returned from app_main()[0m
+[0;32mI (794) Ctr: Đã publish: {"lux": 0.00, "time": 1762246375}[0m
+[0;32mI (794) Ctr: Lux: 0.00, Time: 1762246375 (queued)[0m
+[0;32mI (814) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (814) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1814) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1824) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (1824) Ctr: Retrying WiFi... (1/1000)[0m
+[0;32mI (2804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246377}[0m
+[0;32mI (2804) Ctr: Lux: 521.67, Time: 1762246377 (queued)[0m
+[0;33mW (4244) Ctr: Retrying WiFi... (2/1000)[0m
+[0;32mI (4294) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4294) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4334) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4374) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4434) wifi:connected with E, aid = 1, channel 6, BW20, bssid = ee:df:76:3a:e3:c6[0m
+[0;32mI (4434) wifi:security: WPA2-PSK, phy: bgn, rssi: -30[0m
+[0;32mI (4434) wifi:pm start, type: 1[0m
+
+[0;32mI (4444) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4474) wifi:<ba-add>idx:0 (ifx:0, ee:df:76:3a:e3:c6), tid:0, ssn:0, winSize:64[0m
+[0;32mI (4494) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (4494) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246379}[0m
+[0;32mI (4804) Ctr: Lux: 522.50, Time: 1762246379 (queued)[0m
+[0;32mI (5534) esp_netif_handlers: sta ip: 10.185.179.1, mask: 255.255.255.0, gw: 10.185.179.162[0m
+[0;32mI (5534) Ctr: WiFi got IP[0m
+[0;32mI (5534) Ctr: Đang đồng bộ thời gian NTP...[0m
+[0;32mI (5534) Ctr: Reconnecting MQTT...[0m
+[0;32mI (5534) mqtt_client: Client force reconnect requested[0m
+[0;32mI (6804) Ctr: Lux: 522.50, Time: 1762246381 (queued)[0m
+[0;32mI (8804) Ctr: Lux: 522.50, Time: 1762246383 (queued)[0m
+[0;32mI (10334) Ctr: MQTT CONNECTED[0m
+[0;32mI (10344) Ctr: Đã publish: {"lux": 522.50, "time": 1762246381}[0m
+[0;32mI (10344) Ctr: Đã publish: {"lux": 522.50, "time": 1762246383}[0m
+[0;32mI (10804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246386}[0m
+[0;32mI (10804) Ctr: Lux: 522.50, Time: 1762246386 (queued)[0m
+[0;32mI (12804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246388}[0m
+[0;32mI (12804) Ctr: Lux: 522.50, Time: 1762246388 (queued)[0m
+[0;32mI (14804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246390}[0m
+[0;32mI (14804) Ctr: Lux: 522.50, Time: 1762246390 (queued)[0m
+[0;32mI (16804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246392}[0m
+[0;32mI (16804) Ctr: Lux: 522.50, Time: 1762246392 (queued)[0m
+[0;32mI (18804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246394}[0m
+[0;32mI (18804) Ctr: Lux: 522.50, Time: 1762246394 (queued)[0m
+[0;32mI (20804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246396}[0m
+[0;32mI (20804) Ctr: Lux: 522.50, Time: 1762246396 (queued)[0m
+[0;32mI (22804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246398}[0m
+[0;32mI (22804) Ctr: Lux: 522.50, Time: 1762246398 (queued)[0m
+[0;32mI (24804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246400}[0m
+[0;32mI (24804) Ctr: Lux: 521.67, Time: 1762246400 (queued)[0m
+[0;32mI (26804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246402}[0m
+[0;32mI (26804) Ctr: Lux: 521.67, Time: 1762246402 (queued)[0m
+[0;32mI (28804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246404}[0m
+[0;32mI (28804) Ctr: Lux: 521.67, Time: 1762246404 (queued)[0m
+[0;32mI (30804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246406}[0m
+[0;32mI (30804) Ctr: Lux: 521.67, Time: 1762246406 (queued)[0m
+[0;32mI (32804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246408}[0m
+[0;32mI (32804) Ctr: Lux: 521.67, Time: 1762246408 (queued)[0m
+[0;32mI (34804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246410}[0m
+[0;32mI (34804) Ctr: Lux: 521.67, Time: 1762246410 (queued)[0m
+[0;32mI (36804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246412}[0m
+[0;32mI (36804) Ctr: Lux: 521.67, Time: 1762246412 (queued)[0m
+[0;32mI (38804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246414}[0m
+[0;32mI (38804) Ctr: Lux: 521.67, Time: 1762246414 (queued)[0m
+[0;32mI (40804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246416}[0m
+[0;32mI (40804) Ctr: Lux: 521.67, Time: 1762246416 (queued)[0m
+[0;32mI (42804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246418}[0m
+[0;32mI (42804) Ctr: Lux: 521.67, Time: 1762246418 (queued)[0m
+[0;32mI (44804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246420}[0m
+[0;32mI (44804) Ctr: Lux: 521.67, Time: 1762246420 (queued)[0m
+[0;32mI (46804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246422}[0m
+[0;32mI (46804) Ctr: Lux: 521.67, Time: 1762246422 (queued)[0m
+[0;32mI (48804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246424}[0m
+[0;32mI (48804) Ctr: Lux: 521.67, Time: 1762246424 (queued)[0m
+[0;32mI (50804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246426}[0m
+[0;32mI (50804) Ctr: Lux: 521.67, Time: 1762246426 (queued)[0m
+[0;32mI (52804) Ctr: Đã publish: {"lux": 525.00, "time": 1762246428}[0m
+[0;32mI (52804) Ctr: Lux: 525.00, Time: 1762246428 (queued)[0m
+[0;32mI (54804) Ctr: Đã publish: {"lux": 525.00, "time": 1762246430}[0m
+[0;32mI (54804) Ctr: Lux: 525.00, Time: 1762246430 (queued)[0m
+[0;32mI (56804) Ctr: Đã publish: {"lux": 525.83, "time": 1762246432}[0m
+[0;32mI (56804) Ctr: Lux: 525.83, Time: 1762246432 (queued)[0m
+[0;32mI (58804) Ctr: Đã publish: {"lux": 525.83, "time": 1762246434}[0m
+[0;32mI (58804) Ctr: Lux: 525.83, Time: 1762246434 (queued)[0m
+[0;32mI (60804) Ctr: Đã publish: {"lux": 525.83, "time": 1762246436}[0m
+[0;32mI (60804) Ctr: Lux: 525.83, Time: 1762246436 (queued)[0m
+[0;32mI (62804) Ctr: Đã publish: {"lux": 525.83, "time": 1762246438}[0m
+[0;32mI (62804) Ctr: Lux: 525.83, Time: 1762246438 (queued)[0m
+[0;32mI (64804) Ctr: Đã publish: {"lux": 525.83, "time": 1762246440}[0m
+[0;32mI (64804) Ctr: Lux: 525.83, Time: 1762246440 (queued)[0m
+[0;32mI (66804) Ctr: Đã publish: {"lux": 525.83, "time": 1762246442}[0m
+[0;32mI (66804) Ctr: Lux: 525.83, Time: 1762246442 (queued)[0m
+[0;32mI (68804) Ctr: Đã publish: {"lux": 525.83, "time": 1762246444}[0m
+[0;32mI (68804) Ctr: Lux: 525.83, Time: 1762246444 (queued)[0m
+[0;32mI (70804) Ctr: Đã publish: {"lux": 525.83, "time": 1762246446}[0m
+[0;32mI (70804) Ctr: Lux: 525.83, Time: 1762246446 (queued)[0m
+[0;32mI (72804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246448}[0m
+[0;32mI (72804) Ctr: Lux: 526.67, Time: 1762246448 (queued)[0m
+[0;32mI (74804) Ctr: Đã publish: {"lux": 525.00, "time": 1762246450}[0m
+[0;32mI (74804) Ctr: Lux: 525.00, Time: 1762246450 (queued)[0m
+[0;32mI (76804) Ctr: Đã publish: {"lux": 525.83, "time": 1762246452}[0m
+[0;32mI (76804) Ctr: Lux: 525.83, Time: 1762246452 (queued)[0m
+[0;32mI (78804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246454}[0m
+[0;32mI (78804) Ctr: Lux: 526.67, Time: 1762246454 (queued)[0m
+[0;32mI (80804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246456}[0m
+[0;32mI (80804) Ctr: Lux: 526.67, Time: 1762246456 (queued)[0m
+[0;32mI (82804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246458}[0m
+[0;32mI (82804) Ctr: Lux: 526.67, Time: 1762246458 (queued)[0m
+[0;32mI (84804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246460}[0m
+[0;32mI (84804) Ctr: Lux: 526.67, Time: 1762246460 (queued)[0m
+[0;32mI (86804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246462}[0m
+[0;32mI (86804) Ctr: Lux: 526.67, Time: 1762246462 (queued)[0m
+[0;32mI (88804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246464}[0m
+[0;32mI (88804) Ctr: Lux: 526.67, Time: 1762246464 (queued)[0m
+[0;32mI (90804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246466}[0m
+[0;32mI (90804) Ctr: Lux: 526.67, Time: 1762246466 (queued)[0m
+[0;32mI (92804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246468}[0m
+[0;32mI (92804) Ctr: Lux: 526.67, Time: 1762246468 (queued)[0m
+[0;32mI (94804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246470}[0m
+[0;32mI (94804) Ctr: Lux: 526.67, Time: 1762246470 (queued)[0m
+[0;32mI (96804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246472}[0m
+[0;32mI (96804) Ctr: Lux: 526.67, Time: 1762246472 (queued)[0m
+[0;32mI (98804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246474}[0m
+[0;32mI (98804) Ctr: Lux: 526.67, Time: 1762246474 (queued)[0m
+[0;32mI (100804) Ctr: Đã publish: {"lux": 526.67, "time": 1762246476}[0m
+[0;32mI (100804) Ctr: Lux: 526.67, Time: 1762246476 (queued)[0m
+[0;32mI (102804) Ctr: Đã publish: {"lux": 524.17, "time": 1762246478}[0m
+[0;32mI (102804) Ctr: Lux: 524.17, Time: 1762246478 (queued)[0m
+[0;32mI (104804) Ctr: Đã publish: {"lux": 520.83, "time": 1762246480}[0m
+[0;32mI (104804) Ctr: Lux: 520.83, Time: 1762246480 (queued)[0m
+[0;32mI (106804) Ctr: Đã publish: {"lux": 521.67, "time": 1762246482}[0m
+[0;32mI (106804) Ctr: Lux: 521.67, Time: 1762246482 (queued)[0m
+[0;32mI (108804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246484}[0m
+[0;32mI (108804) Ctr: Lux: 522.50, Time: 1762246484 (queued)[0m
+[0;32mI (110804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246486}[0m
+[0;32mI (110804) Ctr: Lux: 522.50, Time: 1762246486 (queued)[0m
+[0;32mI (112804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246488}[0m
+[0;32mI (112804) Ctr: Lux: 522.50, Time: 1762246488 (queued)[0m
+[0;32mI (114804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246490}[0m
+[0;32mI (114804) Ctr: Lux: 522.50, Time: 1762246490 (queued)[0m
+[0;32mI (116804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246492}[0m
+[0;32mI (116804) Ctr: Lux: 522.50, Time: 1762246492 (queued)[0m
+[0;32mI (118804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246494}[0m
+[0;32mI (118804) Ctr: Lux: 522.50, Time: 1762246494 (queued)[0m
+[0;32mI (120804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246496}[0m
+[0;32mI (120804) Ctr: Lux: 522.50, Time: 1762246496 (queued)[0m
+[0;32mI (122804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246498}[0m
+[0;32mI (122804) Ctr: Lux: 522.50, Time: 1762246498 (queued)[0m
+[0;32mI (124804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246500}[0m
+[0;32mI (124804) Ctr: Lux: 522.50, Time: 1762246500 (queued)[0m
+[0;32mI (126804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246502}[0m
+[0;32mI (126804) Ctr: Lux: 522.50, Time: 1762246502 (queued)[0m
+[0;32mI (128804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246504}[0m
+[0;32mI (128804) Ctr: Lux: 522.50, Time: 1762246504 (queued)[0m
+[0;32mI (130804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246506}[0m
+[0;32mI (130804) Ctr: Lux: 522.50, Time: 1762246506 (queued)[0m
+[0;32mI (132804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246508}[0m
+[0;32mI (132804) Ctr: Lux: 522.50, Time: 1762246508 (queued)[0m
+[0;32mI (134804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246510}[0m
+[0;32mI (134804) Ctr: Lux: 522.50, Time: 1762246510 (queued)[0m
+[0;32mI (136804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246512}[0m
+[0;32mI (136804) Ctr: Lux: 522.50, Time: 1762246512 (queued)[0m
+[0;32mI (138804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246514}[0m
+[0;32mI (138804) Ctr: Lux: 522.50, Time: 1762246514 (queued)[0m
+[0;32mI (140804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246516}[0m
+[0;32mI (140804) Ctr: Lux: 522.50, Time: 1762246516 (queued)[0m
+[0;32mI (142804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246518}[0m
+[0;32mI (142804) Ctr: Lux: 522.50, Time: 1762246518 (queued)[0m
+[0;32mI (144804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246520}[0m
+[0;32mI (144804) Ctr: Lux: 522.50, Time: 1762246520 (queued)[0m
+[0;32mI (146804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246522}[0m
+[0;32mI (146804) Ctr: Lux: 522.50, Time: 1762246522 (queued)[0m
+[0;32mI (148804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246524}[0m
+[0;32mI (148804) Ctr: Lux: 522.50, Time: 1762246524 (queued)[0m
+[0;32mI (150804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246526}[0m
+[0;32mI (150804) Ctr: Lux: 522.50, Time: 1762246526 (queued)[0m
+[0;32mI (152804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246528}[0m
+[0;32mI (152804) Ctr: Lux: 522.50, Time: 1762246528 (queued)[0m
+[0;32mI (154804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246530}[0m
+[0;32mI (154804) Ctr: Lux: 522.50, Time: 1762246530 (queued)[0m
+[0;32mI (156804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246532}[0m
+[0;32mI (156804) Ctr: Lux: 523.33, Time: 1762246532 (queued)[0m
+[0;32mI (158804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246534}[0m
+[0;32mI (158804) Ctr: Lux: 523.33, Time: 1762246534 (queued)[0m
+[0;32mI (160804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246536}[0m
+[0;32mI (160804) Ctr: Lux: 522.50, Time: 1762246536 (queued)[0m
+[0;32mI (162804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246538}[0m
+[0;32mI (162804) Ctr: Lux: 523.33, Time: 1762246538 (queued)[0m
+[0;32mI (164804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246540}[0m
+[0;32mI (164804) Ctr: Lux: 523.33, Time: 1762246540 (queued)[0m
+[0;32mI (166804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246542}[0m
+[0;32mI (166804) Ctr: Lux: 523.33, Time: 1762246542 (queued)[0m
+[0;32mI (168804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246544}[0m
+[0;32mI (168804) Ctr: Lux: 523.33, Time: 1762246544 (queued)[0m
+[0;32mI (170804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246546}[0m
+[0;32mI (170804) Ctr: Lux: 522.50, Time: 1762246546 (queued)[0m
+[0;32mI (172804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246548}[0m
+[0;32mI (172804) Ctr: Lux: 522.50, Time: 1762246548 (queued)[0m
+[0;32mI (174804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246550}[0m
+[0;32mI (174804) Ctr: Lux: 523.33, Time: 1762246550 (queued)[0m
+[0;32mI (176804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246552}[0m
+[0;32mI (176804) Ctr: Lux: 522.50, Time: 1762246552 (queued)[0m
+[0;32mI (178804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246554}[0m
+[0;32mI (178804) Ctr: Lux: 523.33, Time: 1762246554 (queued)[0m
+[0;32mI (180804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246556}[0m
+[0;32mI (180804) Ctr: Lux: 522.50, Time: 1762246556 (queued)[0m
+[0;32mI (182804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246558}[0m
+[0;32mI (182804) Ctr: Lux: 523.33, Time: 1762246558 (queued)[0m
+[0;32mI (184804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246560}[0m
+[0;32mI (184804) Ctr: Lux: 522.50, Time: 1762246560 (queued)[0m
+[0;32mI (186804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246562}[0m
+[0;32mI (186804) Ctr: Lux: 522.50, Time: 1762246562 (queued)[0m
+[0;32mI (188804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246564}[0m
+[0;32mI (188804) Ctr: Lux: 522.50, Time: 1762246564 (queued)[0m
+[0;32mI (190804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246566}[0m
+[0;32mI (190804) Ctr: Lux: 522.50, Time: 1762246566 (queued)[0m
+[0;32mI (192804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246568}[0m
+[0;32mI (192804) Ctr: Lux: 522.50, Time: 1762246568 (queued)[0m
+[0;32mI (194804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246570}[0m
+[0;32mI (194804) Ctr: Lux: 522.50, Time: 1762246570 (queued)[0m
+[0;32mI (196804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246572}[0m
+[0;32mI (196804) Ctr: Lux: 522.50, Time: 1762246572 (queued)[0m
+[0;32mI (198804) Ctr: Đã publish: {"lux": 522.50, "time": 1762246574}[0m
+[0;32mI (198804) Ctr: Lux: 522.50, Time: 1762246574 (queued)[0m
+[0;32mI (200804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246576}[0m
+[0;32mI (200804) Ctr: Lux: 523.33, Time: 1762246576 (queued)[0m
+[0;32mI (202804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246578}[0m
+[0;32mI (202804) Ctr: Lux: 523.33, Time: 1762246578 (queued)[0m
+[0;32mI (204804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246580}[0m
+[0;32mI (204804) Ctr: Lux: 523.33, Time: 1762246580 (queued)[0m
+[0;32mI (206804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246582}[0m
+[0;32mI (206804) Ctr: Lux: 523.33, Time: 1762246582 (queued)[0m
+[0;32mI (208804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246584}[0m
+[0;32mI (208804) Ctr: Lux: 523.33, Time: 1762246584 (queued)[0m
+[0;32mI (210804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246586}[0m
+[0;32mI (210804) Ctr: Lux: 523.33, Time: 1762246586 (queued)[0m
+[0;32mI (212804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246588}[0m
+[0;32mI (212804) Ctr: Lux: 523.33, Time: 1762246588 (queued)[0m
+[0;32mI (214804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246590}[0m
+[0;32mI (214804) Ctr: Lux: 523.33, Time: 1762246590 (queued)[0m
+[0;32mI (216804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246592}[0m
+[0;32mI (216804) Ctr: Lux: 523.33, Time: 1762246592 (queued)[0m
+[0;32mI (218804) Ctr: Đã publish: {"lux": 524.17, "time": 1762246594}[0m
+[0;32mI (218804) Ctr: Lux: 524.17, Time: 1762246594 (queued)[0m
+[0;32mI (220804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246596}[0m
+[0;32mI (220804) Ctr: Lux: 523.33, Time: 1762246596 (queued)[0m
+[0;32mI (222804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246598}[0m
+[0;32mI (222804) Ctr: Lux: 523.33, Time: 1762246598 (queued)[0m
+[0;32mI (224804) Ctr: Đã publish: {"lux": 523.33, "time": 1762246600}[0m
+[0;32mI (224804) Ctr: Lux: 523.33, Time: 1762246600 (queued)[0m

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lọc dữ liệu</title>
+  <script defer src="filter.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .row label {
+      width: 80px;
+      margin-right: 10px;
+    }
+
+    .row input {
+      width: 200px;
+      padding: 5px;
+      margin-right: 20px;
+    }
+
+    button {
+      padding: 5px 15px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Lọc dữ liệu thu được từ cảm biến</h1>
+  <form id="filterForm">
+    <div class="row">
+      <label>From:</label>
+      <input type="datetime-local" id="start" />
+      <label>To:</label>
+      <input type="datetime-local" id="end" />
+    </div>
+
+    <div class="row">
+
+      <label>Lux min:</label>
+      <input type="number" id="luxMin" />
+      <label>Lux max:</label>
+      <input type="number" id="luxMax" />
+    </div>
+    <br><br>
+    <button type="submit" id="FilterBut">Lọc</button>
+  </form>
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Thời gian</th>
+        <th>Lux</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+
+  <button onclick="location.href='/'">Luxdata with realtime</button>
+
+</body>
+
+</html>

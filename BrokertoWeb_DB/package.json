@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "events": "^3.3.0",
+    "express": "^5.1.0",
+    "http": "^0.0.1-security",
+    "mqtt": "^5.14.1",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7",
+    "socket.io": "^4.8.1"
+  },
+  "name": "brokertoweb_db",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mqtt": "node ./mqtt_data/mqtt_receivedata.js",
+    "db": "node ./Database/pg_insertdata.js",
+    "web": "node ./Web_Interface/main.js",
+    "start": "concurrently -n \"MQTT,DB,WEB\" -c \"cyan,yellow,magenta\" \"npm run mqtt\" \"npm run db\" \"npm run web\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "path": "^0.12.7",
+    "url": "^0.11.4"
+  }
+}
