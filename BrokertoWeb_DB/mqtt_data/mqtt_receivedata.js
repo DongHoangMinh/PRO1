@@ -1,6 +1,16 @@
 import mqtt from "mqtt"
 import EventEmitter from "events";
-import { Luxdata } from "../Database/models/Luxdata.js";
+import pg1 from "pg"
+const { Pool } = pg1;
+
+const pool = new Pool({
+  user: "postgres",
+  host: "localhost",
+  database: "iotdb",
+  password: "minhtinh",
+  port: 5432,
+});
+
 
 const MQTT_BROKER = "mqtt://broker.hivemq.com:1883"
 const TOPIC = "esp32/luxbh1750";
@@ -41,12 +51,14 @@ client.on("message", async (topic, message) => {
       resetTimeout();
 
       try {
-        await Luxdata.create({ lux: data.lux, timestamp });
-        console.log(`Saved : ${data.lux} at ${timestamp.toISOString()}`);
-
-      } catch (dbErr) {
-        console.error("Database_save error:", dbErr.message);
+        await pool.query(
+          "INSERT INTO bh1750lux (lux, timestamp) VALUES ($1, $2)", [data.lux, timestamp]
+        );
+        console.log(`DA INSERT GIA TRI ${data.lux} LUX`)
+      } catch (err) {
+        console.error("Loi INSERT PostgreSQL:", err.message);
       }
+
 
       dataEmitter.emit("Lux", {
         lux: data.lux,

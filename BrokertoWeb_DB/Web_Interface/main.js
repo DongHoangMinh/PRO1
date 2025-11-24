@@ -4,12 +4,31 @@ import http from "http";
 import { dataEmitter } from "../mqtt_data/mqtt_receivedata.js";
 import path from "path";               // Dùng để xử lý đường dẫn file
 import { fileURLToPath } from "url";   // Chuyển URL module thành đường dẫn file thật
-import { Op } from "sequelize";
-import { Luxdata } from "../Database/models/Luxdata.js";
-import { sequelize } from "../Database/db.js";
-import { connectDB } from "../Database/db.js";
+import { Pool } from "pg";
+const pool = new Pool({
+  user: "postgres",
+  host: "localhost",
+  database: "iotdb",
+  password: "minhtinh",
+  port: 5432,
+});
+async function initDatabase() {
+  try {
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS bh1750lux (
+        id SERIAL PRIMARY KEY,
+        lux REAL NOT NULL,
+        timestamp TIMESTAMP NOT NULL  
+      );
+    `);
 
+    console.log("Bảng bh1750lux đã sẵn sàng.");
+  } catch (err) {
+    console.error("Lỗi tạo bảng:", err.message);
+  }
+}
 
+initDatabase();
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
@@ -17,17 +36,9 @@ const PORT = 3000;
 //const __filename = fileURLToPath(import.meta.url);
 //const __dirname = path.dirname(__filename);
 
-await connectDB();
-await Luxdata.sync();
-console.log(" Luxdata table is READY...");
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-// Kết nối CSDL
-await connectDB();
-await Luxdata.sync();
-console.log("Luxdata table is READY...");
 
 // Cho phép Express truy cập folder public
 app.use(express.static(path.join(__dirname, "public")));
@@ -45,23 +56,41 @@ app.get("/filter", (req, res) => {
 
 app.get("/api/lux", async (req, res) => {
   const { start, end, luxMin, luxMax } = req.query;
-  const where = {};
-  if (start && end)
-    where.timestamp = { [Op.between]: [new Date(start), new Date(end)] };
-  if (luxMin && luxMax)
-    where.lux = { [Op.between]: [parseFloat(luxMin), parseFloat(luxMax)] };
-  else if (luxMin)
-    where.lux = { [Op.gte]: parseFloat(luxMin) };
-  else if (luxMax)
-    where.lux = { [Op.lte]: parseFloat(luxMax) };
-  try {
-    const data = await Luxdata.findAll({ where });
-    res.json(data);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: err.message });
+  let query = "SELECT * FROM bh1750lux WHERE 1=1";
+  const params = [];
+  let idx = 1;
+
+  // Filter theo thời gian
+  if (start && end) {
+    query += ` AND timestamp BETWEEN $${idx++} AND $${idx++}`;
+    params.push(new Date(start), new Date(end));
+  } else if (start) {  // chỉ có start
+    query += ` AND timestamp >= $${idx++}`;
+    params.push(new Date(start));
+  } else if (end) {    // chỉ có end
+    query += ` AND timestamp <= $${idx++}`;
+    params.push(new Date(end));
   }
 
+  // Filter theo Lux
+  if (luxMin && luxMax) {
+    query += ` AND lux BETWEEN $${idx++} AND $${idx++}`;
+    params.push(parseFloat(luxMin), parseFloat(luxMax));
+  } else if (luxMin) {
+    query += ` AND lux >= $${idx++}`;
+    params.push(parseFloat(luxMin));
+  } else if (luxMax) {
+    query += ` AND lux <= $${idx++}`;
+    params.push(parseFloat(luxMax));
+  }
+
+  try {
+    const { rows } = await pool.query(query, params);
+    res.json(rows);
+  } catch (err) {
+    console.error("Lỗi truy vấn:", err.message);
+    res.status(500).json({ error: err.message });
+  }
 
 })
 
