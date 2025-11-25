@@ -1,0 +1,759 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 17:30:50[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1eebch (126652) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=0002eee4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002ef08 vaddr=3ffb0000 size=01110h (  4368) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=9fd5ch (654684) map[0m
+[0;32mI (367) esp_image: segment 4: paddr=000cfd84 vaddr=3ffb1110 size=02f08h ( 12040) load[0m
+[0;32mI (372) esp_image: segment 5: paddr=000d2c94 vaddr=40080000 size=18d54h (101716) load[0m
+[0;32mI (423) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (423) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (442) cpu_start: Pro cpu start user code[0m
+[0;32mI (442) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (442) app_init: Application information:[0m
+[0;32mI (442) app_init: Project name:     blink[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (449) app_init: Compile time:     Oct 28 2025 17:30:41[0m
+[0;32mI (454) app_init: ELF file SHA256:  8c508151b...[0m
+[0;32mI (459) app_init: ESP-IDF:          v5.4.2-dirty[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB86E0 len 00027920 (158 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 40098D54 len 000072AC (28 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (511) spi_flash: flash io: dio[0m
+[0;33mW (514) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (525) main_task: Started on CPU0[0m
+[0;32mI (535) main_task: Calling app_main()[0m
+[0;32mI (555) Ctr: Khởi tạo I2C và BH1750 thành công[0m
+[0;32mI (555) Ctr: Lux: 0.00, Time: 0 (queued)[0m
+[0;32mI (575) wifi:wifi driver task: 3ffc40b8, prio:23, stack:6656, core=0[0m
+[0;32mI (585) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (585) wifi:wifi certification version: v7.0[0m
+[0;32mI (585) wifi:config NVS flash: enabled[0m
+[0;32mI (585) wifi:config nano formatting: disabled[0m
+[0;32mI (585) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (595) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (595) wifi:Init management short buffer num: 32[0m
+[0;32mI (605) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (605) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (615) wifi:Init static rx buffer num: 10[0m
+[0;32mI (615) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (625) wifi_init: rx ba win: 6[0m
+[0;32mI (625) wifi_init: accept mbox: 6[0m
+[0;32mI (625) wifi_init: tcpip mbox: 32[0m
+[0;32mI (625) wifi_init: udp mbox: 6[0m
+[0;32mI (635) wifi_init: tcp mbox: 6[0m
+[0;32mI (635) wifi_init: tcp tx win: 5760[0m
+[0;32mI (635) wifi_init: tcp rx win: 5760[0m
+[0;32mI (635) wifi_init: tcp mss: 1440[0m
+[0;32mI (645) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (645) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (655) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (655) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (745) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (775) wifi:mode : sta (38:18:2b:e9:90:0c)[0m
+[0;32mI (775) wifi:enable tsf[0m
+[0;32mI (775) Ctr: WiFi init[0m
+[0;32mI (785) Ctr: WiFi start -> connect()[0m
+[1;31mE (785) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (785) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (785) mqtt_client: Error transport connect[0m
+[0;33mW (795) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (795) Ctr: Attempt MQTT reconnect 1/1000[0m
+[0;32mI (795) main_task: Returned from app_main()[0m
+[0;32mI (825) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (825) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1295) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1295) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1295) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1295) mqtt_client: Error transport connect[0m
+[0;33mW (1305) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1305) Ctr: Attempt MQTT reconnect 2/1000[0m
+[0;32mI (1805) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1805) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1805) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1805) mqtt_client: Error transport connect[0m
+[0;33mW (1815) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1815) Ctr: Attempt MQTT reconnect 3/1000[0m
+[0;32mI (1825) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1835) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (1835) Ctr: Retrying WiFi... (1/1000)[0m
+[0;32mI (2315) mqtt_client: Client force reconnect requested[0m
+[1;31mE (2315) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2315) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2315) mqtt_client: Error transport connect[0m
+[0;33mW (2325) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (2325) Ctr: Attempt MQTT reconnect 4/1000[0m
+[0;32mI (2555) Ctr: Lux: 445.83, Time: 2 (queued)[0m
+[0;32mI (2825) mqtt_client: Client force reconnect requested[0m
+[1;31mE (2825) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2825) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2825) mqtt_client: Error transport connect[0m
+[0;33mW (2835) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (2835) Ctr: Attempt MQTT reconnect 5/1000[0m
+[0;32mI (3335) mqtt_client: Client force reconnect requested[0m
+[1;31mE (3335) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (3335) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (3335) mqtt_client: Error transport connect[0m
+[0;33mW (3345) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (3345) Ctr: Attempt MQTT reconnect 6/1000[0m
+[0;32mI (3845) mqtt_client: Client force reconnect requested[0m
+[1;31mE (3845) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (3845) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (3845) mqtt_client: Error transport connect[0m
+[0;33mW (3855) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (3855) Ctr: Attempt MQTT reconnect 7/1000[0m
+[0;33mW (4255) Ctr: Retrying WiFi... (2/1000)[0m
+[0;32mI (4265) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4265) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4275) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4295) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4315) wifi:connected with E, aid = 1, channel 6, BW20, bssid = ee:df:76:3a:e3:c6[0m
+[0;32mI (4315) wifi:security: WPA2-PSK, phy: bgn, rssi: -41[0m
+[0;32mI (4315) wifi:pm start, type: 1[0m
+
+[0;32mI (4315) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4325) wifi:<ba-add>idx:0 (ifx:0, ee:df:76:3a:e3:c6), tid:0, ssn:0, winSize:64[0m
+[0;32mI (4355) mqtt_client: Client force reconnect requested[0m
+[1;31mE (4355) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (4355) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (4355) mqtt_client: Error transport connect[0m
+[0;33mW (4365) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (4365) Ctr: Attempt MQTT reconnect 8/1000[0m
+[0;32mI (4405) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (4405) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4555) Ctr: Lux: 445.83, Time: 4 (queued)[0m
+[0;32mI (4865) mqtt_client: Client force reconnect requested[0m
+[0;32mI (5355) esp_netif_handlers: sta ip: 10.223.122.1, mask: 255.255.255.0, gw: 10.223.122.204[0m
+[0;32mI (5355) Ctr: WiFi got IP[0m
+[0;32mI (5355) Ctr: Đang đồng bộ thời gian NTP...[0m
+[0;32mI (5355) Ctr: WiFi up -> attempt MQTT reconnect[0m
+[0;32mI (5355) mqtt_client: Client force reconnect requested[0m
+[0;32mI (6555) Ctr: Lux: 446.67, Time: 6 (queued)[0m
+[0;33mW (6865) mqtt_client: Connection refused, not authorized[0m
+[1;31mE (6865) mqtt_client: MQTT connect failed[0m
+[0;33mW (6865) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (6865) Ctr: Attempt MQTT reconnect 9/1000[0m
+[0;32mI (7375) mqtt_client: Client force reconnect requested[0m
+[0;32mI (8555) Ctr: Lux: 446.67, Time: 8 (queued)[0m
+[0;32mI (10555) Ctr: Lux: 446.67, Time: 1763914890 (queued)[0m
+[0;32mI (12555) Ctr: Lux: 447.50, Time: 1763914892 (queued)[0m
+[0;32mI (14045) Ctr: MQTT CONNECTED[0m
+[0;32mI (14045) Ctr: Published OK (id=58258): {"lux": 0.00, "time": 0}[0m
+[0;32mI (14055) Ctr: Published OK (id=32396): {"lux": 445.83, "time": 2}[0m
+[0;32mI (14055) Ctr: Published OK (id=51106): {"lux": 445.83, "time": 4}[0m
+[0;32mI (14055) Ctr: Published OK (id=34554): {"lux": 446.67, "time": 6}[0m
+[0;32mI (14065) Ctr: Published OK (id=55584): {"lux": 446.67, "time": 8}[0m
+[0;32mI (14065) Ctr: Published OK (id=7892): {"lux": 446.67, "time": 1763914890}[0m
+[0;32mI (14075) Ctr: Published OK (id=20966): {"lux": 447.50, "time": 1763914892}[0m
+[0;32mI (14555) Ctr: Published OK (id=49019): {"lux": 447.50, "time": 1763914894}[0m
+[0;32mI (14555) Ctr: Lux: 447.50, Time: 1763914894 (queued)[0m
+[0;32mI (16555) Ctr: Published OK (id=8538): {"lux": 447.50, "time": 1763914896}[0m
+[0;32mI (16555) Ctr: Lux: 447.50, Time: 1763914896 (queued)[0m
+[0;32mI (18555) Ctr: Published OK (id=31281): {"lux": 447.50, "time": 1763914898}[0m
+[0;32mI (18555) Ctr: Lux: 447.50, Time: 1763914898 (queued)[0m
+[0;32mI (20555) Ctr: Published OK (id=7647): {"lux": 447.50, "time": 1763914900}[0m
+[0;32mI (20555) Ctr: Lux: 447.50, Time: 1763914900 (queued)[0m
+[0;32mI (22555) Ctr: Published OK (id=37123): {"lux": 447.50, "time": 1763914902}[0m
+[0;32mI (22555) Ctr: Lux: 447.50, Time: 1763914902 (queued)[0m
+[0;32mI (24555) Ctr: Published OK (id=15415): {"lux": 448.33, "time": 1763914904}[0m
+[0;32mI (24555) Ctr: Lux: 448.33, Time: 1763914904 (queued)[0m
+[0;32mI (26555) Ctr: Published OK (id=26492): {"lux": 447.50, "time": 1763914906}[0m
+[0;32mI (26555) Ctr: Lux: 447.50, Time: 1763914906 (queued)[0m
+[0;32mI (28555) Ctr: Published OK (id=50744): {"lux": 453.33, "time": 1763914908}[0m
+[0;32mI (28555) Ctr: Lux: 453.33, Time: 1763914908 (queued)[0m
+[0;32mI (30555) Ctr: Published OK (id=14819): {"lux": 450.83, "time": 1763914910}[0m
+[0;32mI (30555) Ctr: Lux: 450.83, Time: 1763914910 (queued)[0m
+[0;32mI (32555) Ctr: Published OK (id=49800): {"lux": 450.00, "time": 1763914912}[0m
+[0;32mI (32555) Ctr: Lux: 450.00, Time: 1763914912 (queued)[0m
+[0;32mI (33895) wifi:state: run -> init (0x1c0)[0m
+[0;32mI (33905) wifi:pm stop, total sleep time: 24827669 us / 29581940 us[0m
+
+[0;32mI (33905) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (33905) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[1;31mE (33915) transport_base: tcp_read error, errno=Software caused connection abort[0m
+[0;33mW (33915) Ctr: Retrying WiFi... (1/1000)[0m
+[1;31mE (33915) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=113[0m
+[1;31mE (33925) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;33mW (33935) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (33935) Ctr: Attempt MQTT reconnect 1/1000[0m
+[0;32mI (33995) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (33995) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (34095) wifi:state: auth -> init (0x3c0)[0m
+[0;32mI (34115) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (34115) Ctr: Retrying WiFi... (2/1000)[0m
+[0;32mI (34445) mqtt_client: Client force reconnect requested[0m
+[1;31mE (34445) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (34445) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (34445) mqtt_client: Error transport connect[0m
+[0;33mW (34455) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (34455) Ctr: Attempt MQTT reconnect 2/1000[0m
+[0;33mW (34555) Ctr: MQTT not ready when trying to publish, requeue[0m
+[0;32mI (34555) Ctr: Lux: 450.83, Time: 1763914914 (queued)[0m
+[0;32mI (34955) mqtt_client: Client force reconnect requested[0m
+[1;31mE (34955) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (34955) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (34955) mqtt_client: Error transport connect[0m
+[0;33mW (34965) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (34965) Ctr: Attempt MQTT reconnect 3/1000[0m
+[0;32mI (35465) mqtt_client: Client force reconnect requested[0m
+[1;31mE (35465) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (35465) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (35465) mqtt_client: Error transport connect[0m
+[0;33mW (35475) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (35475) Ctr: Attempt MQTT reconnect 4/1000[0m
+[0;32mI (35975) mqtt_client: Client force reconnect requested[0m
+[1;31mE (35975) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (35975) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (35975) mqtt_client: Error transport connect[0m
+[0;33mW (35975) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (35985) Ctr: Attempt MQTT reconnect 5/1000[0m
+[0;32mI (36485) mqtt_client: Client force reconnect requested[0m
+[1;31mE (36485) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (36485) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (36485) mqtt_client: Error transport connect[0m
+[0;33mW (36485) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (36495) Ctr: Attempt MQTT reconnect 6/1000[0m
+[0;33mW (36535) Ctr: Retrying WiFi... (3/1000)[0m
+[0;32mI (36555) Ctr: Lux: 450.00, Time: 1763914916 (queued)[0m
+[0;32mI (36995) mqtt_client: Client force reconnect requested[0m
+[1;31mE (36995) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (36995) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (36995) mqtt_client: Error transport connect[0m
+[0;33mW (37005) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (37005) Ctr: Attempt MQTT reconnect 7/1000[0m
+[0;32mI (37505) mqtt_client: Client force reconnect requested[0m
+[1;31mE (37505) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (37505) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (37505) mqtt_client: Error transport connect[0m
+[0;33mW (37515) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (37515) Ctr: Attempt MQTT reconnect 8/1000[0m
+[0;32mI (38015) mqtt_client: Client force reconnect requested[0m
+[1;31mE (38015) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (38015) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (38015) mqtt_client: Error transport connect[0m
+[0;33mW (38025) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (38025) Ctr: Attempt MQTT reconnect 9/1000[0m
+[0;32mI (38525) mqtt_client: Client force reconnect requested[0m
+[1;31mE (38525) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (38525) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (38525) mqtt_client: Error transport connect[0m
+[0;33mW (38525) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (38535) Ctr: Attempt MQTT reconnect 10/1000[0m
+[0;32mI (38555) Ctr: Lux: 450.00, Time: 1763914918 (queued)[0m
+[0;33mW (38955) Ctr: Retrying WiFi... (4/1000)[0m
+[0;32mI (39035) mqtt_client: Client force reconnect requested[0m
+[1;31mE (39035) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (39035) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (39035) mqtt_client: Error transport connect[0m
+[0;33mW (39035) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (39045) Ctr: Attempt MQTT reconnect 11/1000[0m
+[0;32mI (39545) mqtt_client: Client force reconnect requested[0m
+[1;31mE (39545) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (39545) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (39545) mqtt_client: Error transport connect[0m
+[0;33mW (39555) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (39555) Ctr: Attempt MQTT reconnect 12/1000[0m
+[0;32mI (40055) mqtt_client: Client force reconnect requested[0m
+[1;31mE (40055) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (40055) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (40055) mqtt_client: Error transport connect[0m
+[0;33mW (40065) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (40065) Ctr: Attempt MQTT reconnect 13/1000[0m
+[0;32mI (40555) Ctr: Lux: 450.00, Time: 1763914920 (queued)[0m
+[0;32mI (40565) mqtt_client: Client force reconnect requested[0m
+[1;31mE (40565) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (40565) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (40565) mqtt_client: Error transport connect[0m
+[0;33mW (40565) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (40575) Ctr: Attempt MQTT reconnect 14/1000[0m
+[0;32mI (41075) mqtt_client: Client force reconnect requested[0m
+[1;31mE (41075) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (41075) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (41075) mqtt_client: Error transport connect[0m
+[0;33mW (41075) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (41085) Ctr: Attempt MQTT reconnect 15/1000[0m
+[0;33mW (41375) Ctr: Retrying WiFi... (5/1000)[0m
+[0;32mI (41585) mqtt_client: Client force reconnect requested[0m
+[1;31mE (41585) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (41585) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (41585) mqtt_client: Error transport connect[0m
+[0;33mW (41595) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (41595) Ctr: Attempt MQTT reconnect 16/1000[0m
+[0;32mI (42095) mqtt_client: Client force reconnect requested[0m
+[1;31mE (42095) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (42095) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (42095) mqtt_client: Error transport connect[0m
+[0;33mW (42105) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (42105) Ctr: Attempt MQTT reconnect 17/1000[0m
+[0;32mI (42555) Ctr: Lux: 450.00, Time: 1763914922 (queued)[0m
+[0;32mI (42605) mqtt_client: Client force reconnect requested[0m
+[1;31mE (42605) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (42605) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (42605) mqtt_client: Error transport connect[0m
+[0;33mW (42615) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (42615) Ctr: Attempt MQTT reconnect 18/1000[0m
+[0;32mI (43115) mqtt_client: Client force reconnect requested[0m
+[1;31mE (43115) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (43115) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (43115) mqtt_client: Error transport connect[0m
+[0;33mW (43115) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (43125) Ctr: Attempt MQTT reconnect 19/1000[0m
+[0;32mI (43625) mqtt_client: Client force reconnect requested[0m
+[1;31mE (43625) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (43625) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (43625) mqtt_client: Error transport connect[0m
+[0;33mW (43625) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (43635) Ctr: Attempt MQTT reconnect 20/1000[0m
+[0;33mW (43795) Ctr: Retrying WiFi... (6/1000)[0m
+[0;32mI (44135) mqtt_client: Client force reconnect requested[0m
+[1;31mE (44135) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (44135) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (44135) mqtt_client: Error transport connect[0m
+[0;33mW (44145) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (44145) Ctr: Attempt MQTT reconnect 21/1000[0m
+[0;32mI (44555) Ctr: Lux: 449.17, Time: 1763914924 (queued)[0m
+[0;32mI (44645) mqtt_client: Client force reconnect requested[0m
+[1;31mE (44645) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (44645) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (44645) mqtt_client: Error transport connect[0m
+[0;33mW (44655) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (44655) Ctr: Attempt MQTT reconnect 22/1000[0m
+[0;32mI (45155) mqtt_client: Client force reconnect requested[0m
+[1;31mE (45155) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (45155) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (45155) mqtt_client: Error transport connect[0m
+[0;33mW (45165) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (45165) Ctr: Attempt MQTT reconnect 23/1000[0m
+[0;32mI (45665) mqtt_client: Client force reconnect requested[0m
+[1;31mE (45665) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (45665) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (45665) mqtt_client: Error transport connect[0m
+[0;33mW (45665) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (45675) Ctr: Attempt MQTT reconnect 24/1000[0m
+[0;32mI (46175) mqtt_client: Client force reconnect requested[0m
+[1;31mE (46175) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (46175) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (46175) mqtt_client: Error transport connect[0m
+[0;33mW (46175) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (46185) Ctr: Attempt MQTT reconnect 25/1000[0m
+[0;33mW (46215) Ctr: Retrying WiFi... (7/1000)[0m
+[0;32mI (46555) Ctr: Lux: 449.17, Time: 1763914926 (queued)[0m
+[0;32mI (46685) mqtt_client: Client force reconnect requested[0m
+[1;31mE (46685) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (46685) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (46685) mqtt_client: Error transport connect[0m
+[0;33mW (46695) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (46695) Ctr: Attempt MQTT reconnect 26/1000[0m
+[0;32mI (47195) mqtt_client: Client force reconnect requested[0m
+[1;31mE (47195) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (47195) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (47195) mqtt_client: Error transport connect[0m
+[0;33mW (47205) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (47205) Ctr: Attempt MQTT reconnect 27/1000[0m
+[0;32mI (47705) mqtt_client: Client force reconnect requested[0m
+[1;31mE (47705) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (47705) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (47705) mqtt_client: Error transport connect[0m
+[0;33mW (47715) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (47715) Ctr: Attempt MQTT reconnect 28/1000[0m
+[0;32mI (48215) mqtt_client: Client force reconnect requested[0m
+[1;31mE (48215) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (48215) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (48215) mqtt_client: Error transport connect[0m
+[0;33mW (48215) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (48225) Ctr: Attempt MQTT reconnect 29/1000[0m
+[0;32mI (48555) Ctr: Lux: 448.33, Time: 1763914928 (queued)[0m
+[0;33mW (48625) Ctr: Retrying WiFi... (8/1000)[0m
+[0;32mI (48635) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (48635) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (48645) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (48655) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (48685) wifi:connected with E, aid = 1, channel 6, BW20, bssid = ee:df:76:3a:e3:c6[0m
+[0;32mI (48685) wifi:security: WPA2-PSK, phy: bgn, rssi: -48[0m
+[0;32mI (48695) wifi:pm start, type: 1[0m
+
+[0;32mI (48695) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (48705) wifi:<ba-add>idx:0 (ifx:0, ee:df:76:3a:e3:c6), tid:0, ssn:0, winSize:64[0m
+[0;32mI (48725) mqtt_client: Client force reconnect requested[0m
+[1;31mE (48725) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (48725) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (48725) mqtt_client: Error transport connect[0m
+[0;33mW (48735) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (48735) Ctr: Attempt MQTT reconnect 30/1000[0m
+[0;32mI (48835) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (48835) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (49235) mqtt_client: Client force reconnect requested[0m
+[1;31mE (49235) esp-tls: [sock=54] connect() error: Host is unreachable[0m
+[1;31mE (49235) transport_base: Failed to open a new connection: 32772[0m
+[1;31mE (49235) mqtt_client: Error transport connect[0m
+[0;33mW (49245) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (49245) Ctr: Attempt MQTT reconnect 31/1000[0m
+[0;32mI (49725) esp_netif_handlers: sta ip: 10.223.122.1, mask: 255.255.255.0, gw: 10.223.122.204[0m
+[0;32mI (49725) Ctr: WiFi got IP[0m
+[0;32mI (49725) Ctr: Đang đồng bộ thời gian NTP...[0m
+
+assert failed: sntp_setoperatingmode /IDF/components/lwip/lwip/src/apps/sntp/sntp.c:748 (Operating mode must not be set while SNTP client is running)
+
+
+Backtrace: 0x40081c51:0x3ffc0660 0x4008a99d:0x3ffc0680 0x400927d9:0x3ffc06a0 0x400e4ba9:0x3ffc07c0 0x400e442e:0x3ffc07e0 0x400e4641:0x3ffc0800 0x400e46a1:0x3ffc0820 0x4008b441:0x3ffc0850
+
+
+
+
+ELF file SHA256: 8c508151b
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 17:30:50[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1eebch (126652) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=0002eee4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002ef08 vaddr=3ffb0000 size=01110h (  4368) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=9fd5ch (654684) map[0m
+[0;32mI (367) esp_image: segment 4: paddr=000cfd84 vaddr=3ffb1110 size=02f08h ( 12040) load[0m
+[0;32mI (372) esp_image: segment 5: paddr=000d2c94 vaddr=40080000 size=18d54h (101716) load[0m
+[0;32mI (423) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (423) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (442) cpu_start: Pro cpu start user code[0m
+[0;32mI (442) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (442) app_init: Application information:[0m
+[0;32mI (442) app_init: Project name:     blink[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (449) app_init: Compile time:     Oct 28 2025 17:30:41[0m
+[0;32mI (454) app_init: ELF file SHA256:  8c508151b...[0m
+[0;32mI (459) app_init: ESP-IDF:          v5.4.2-dirty[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB86E0 len 00027920 (158 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 40098D54 len 000072AC (28 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (511) spi_flash: flash io: dio[0m
+[0;33mW (514) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (525) main_task: Started on CPU0[0m
+[0;32mI (535) main_task: Calling app_main()[0m
+[0;32mI (555) Ctr: Khởi tạo I2C và BH1750 thành công[0m
+[0;32mI (555) Ctr: Lux: 0.00, Time: 1763914929 (queued)[0m
+[0;32mI (575) wifi:wifi driver task: 3ffc40b8, prio:23, stack:6656, core=0[0m
+[0;32mI (585) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (585) wifi:wifi certification version: v7.0[0m
+[0;32mI (585) wifi:config NVS flash: enabled[0m
+[0;32mI (585) wifi:config nano formatting: disabled[0m
+[0;32mI (585) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (595) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (595) wifi:Init management short buffer num: 32[0m
+[0;32mI (605) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (605) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (615) wifi:Init static rx buffer num: 10[0m
+[0;32mI (615) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (625) wifi_init: rx ba win: 6[0m
+[0;32mI (625) wifi_init: accept mbox: 6[0m
+[0;32mI (625) wifi_init: tcpip mbox: 32[0m
+[0;32mI (625) wifi_init: udp mbox: 6[0m
+[0;32mI (635) wifi_init: tcp mbox: 6[0m
+[0;32mI (635) wifi_init: tcp tx win: 5760[0m
+[0;32mI (635) wifi_init: tcp rx win: 5760[0m
+[0;32mI (635) wifi_init: tcp mss: 1440[0m
+[0;32mI (645) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (645) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (655) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (655) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (745) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (765) wifi:mode : sta (38:18:2b:e9:90:0c)[0m
+[0;32mI (765) wifi:enable tsf[0m
+[0;32mI (765) Ctr: WiFi init[0m
+[0;32mI (775) Ctr: WiFi start -> connect()[0m
+[1;31mE (775) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (775) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (785) mqtt_client: Error transport connect[0m
+[0;33mW (785) Ctr: MQTT DISCONNECTED[0m
+[0;32mI (785) wifi:W (785) Ctr: Attempt MQTT reconnect 1/1000[0m
+new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0
+[0;32mI (795) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (785) main_task: Returned from app_main()[0m
+[0;32mI (1295) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1295) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1295) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1295) mqtt_client: Error transport connect[0m
+[0;33mW (1305) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1305) Ctr: Attempt MQTT reconnect 2/1000[0m
+[0;32mI (1805) mqtt_client: Client force reconnect requested[0m
+[1;31mE (1805) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1805) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1805) mqtt_client: Error transport connect[0m
+[0;33mW (1815) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1815) Ctr: Attempt MQTT reconnect 3/1000[0m
+[0;32mI (1805) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1835) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (1835) Ctr: Retrying WiFi... (1/1000)[0m
+[0;32mI (2315) mqtt_client: Client force reconnect requested[0m
+[1;31mE (2315) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2315) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2315) mqtt_client: Error transport connect[0m
+[0;33mW (2325) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (2325) Ctr: Attempt MQTT reconnect 4/1000[0m
+[0;32mI (2555) Ctr: Lux: 449.17, Time: 1763914931 (queued)[0m
+[0;32mI (2825) mqtt_client: Client force reconnect requested[0m
+[1;31mE (2825) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (2825) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (2825) mqtt_client: Error transport connect[0m
+[0;33mW (2835) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (2835) Ctr: Attempt MQTT reconnect 5/1000[0m
+[0;32mI (3335) mqtt_client: Client force reconnect requested[0m
+[1;31mE (3335) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (3335) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (3335) mqtt_client: Error transport connect[0m
+[0;33mW (3345) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (3345) Ctr: Attempt MQTT reconnect 6/1000[0m
+[0;32mI (3845) mqtt_client: Client force reconnect requested[0m
+[1;31mE (3845) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (3845) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (3845) mqtt_client: Error transport connect[0m
+[0;33mW (3855) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (3855) Ctr: Attempt MQTT reconnect 7/1000[0m
+[0;33mW (4255) Ctr: Retrying WiFi... (2/1000)[0m
+[0;32mI (4285) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4285) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4295) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4315) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4335) wifi:connected with E, aid = 1, channel 6, BW20, bssid = ee:df:76:3a:e3:c6[0m
+[0;32mI (4335) wifi:security: WPA2-PSK, phy: bgn, rssi: -40[0m
+[0;32mI (4345) wifi:pm start, type: 1[0m
+
+[0;32mI (4345) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (4355) mqtt_client: Client force reconnect requested[0m
+[0;32mI (4355) wifi:<ba-add>idx:0 (ifx:0, ee:df:76:3a:e3:c6), tid:0, ssn:0, winSize:64[0m
+[1;31mE (4355) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (4375) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (4375) mqtt_client: Error transport connect[0m
+[0;33mW (4385) Ctr: MQTT DISCONNECTED[0m
+[0;32mI (4385) wifi:W (4385) Ctr: Attempt MQTT reconnect 8/1000[0m
+dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us
+[0;32mI (4395) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4555) Ctr: Lux: 448.33, Time: 1763914933 (queued)[0m
+[0;32mI (4895) mqtt_client: Client force reconnect requested[0m
+[0;32mI (5405) esp_netif_handlers: sta ip: 10.223.122.1, mask: 255.255.255.0, gw: 10.223.122.204[0m
+[0;32mI (5405) Ctr: WiFi got IP[0m
+[0;32mI (5405) Ctr: Đang đồng bộ thời gian NTP...[0m
+[0;32mI (5405) Ctr: WiFi up -> attempt MQTT reconnect[0m
+[0;32mI (5415) mqtt_client: Client force reconnect requested[0m
+[0;32mI (6555) Ctr: Lux: 449.17, Time: 1763914935 (queued)[0m
+[0;32mI (7895) Ctr: MQTT CONNECTED[0m
+[0;32mI (7905) Ctr: Published OK (id=12660): {"lux": 0.00, "time": 1763914929}[0m
+[0;32mI (7905) Ctr: Published OK (id=39987): {"lux": 449.17, "time": 1763914931}[0m
+[0;32mI (7915) Ctr: Published OK (id=31328): {"lux": 448.33, "time": 1763914933}[0m
+[0;32mI (7915) Ctr: Published OK (id=1819): {"lux": 449.17, "time": 1763914935}[0m
+[0;32mI (8555) Ctr: Published OK (id=189): {"lux": 449.17, "time": 1763914937}[0m
+[0;32mI (8555) Ctr: Lux: 449.17, Time: 1763914937 (queued)[0m
+[0;32mI (10555) Ctr: Published OK (id=23427): {"lux": 448.33, "time": 1763914939}[0m
+[0;32mI (10555) Ctr: Lux: 448.33, Time: 1763914939 (queued)[0m
+[0;32mI (12555) Ctr: Published OK (id=2330): {"lux": 448.33, "time": 1763914941}[0m
+[0;32mI (12555) Ctr: Lux: 448.33, Time: 1763914941 (queued)[0m
+[0;32mI (14555) Ctr: Published OK (id=33978): {"lux": 449.17, "time": 1763914943}[0m
+[0;32mI (14555) Ctr: Lux: 449.17, Time: 1763914943 (queued)[0m
+[0;32mI (16555) Ctr: Published OK (id=8829): {"lux": 448.33, "time": 1763914945}[0m
+[0;32mI (16555) Ctr: Lux: 448.33, Time: 1763914945 (queued)[0m
+[0;32mI (18555) Ctr: Published OK (id=46595): {"lux": 448.33, "time": 1763914947}[0m
+[0;32mI (18555) Ctr: Lux: 448.33, Time: 1763914947 (queued)[0m
+[0;32mI (20555) Ctr: Published OK (id=25071): {"lux": 448.33, "time": 1763914949}[0m
+[0;32mI (20555) Ctr: Lux: 448.33, Time: 1763914949 (queued)[0m
+[0;32mI (22555) Ctr: Published OK (id=42075): {"lux": 449.17, "time": 1763914951}[0m
+[0;32mI (22555) Ctr: Lux: 449.17, Time: 1763914951 (queued)[0m
+[0;32mI (24555) Ctr: Published OK (id=11043): {"lux": 448.33, "time": 1763914953}[0m
+[0;32mI (24555) Ctr: Lux: 448.33, Time: 1763914953 (queued)[0m
+[0;32mI (26555) Ctr: Published OK (id=54013): {"lux": 448.33, "time": 1763914955}[0m
+[0;32mI (26555) Ctr: Lux: 448.33, Time: 1763914955 (queued)[0m
+[0;32mI (28555) Ctr: Published OK (id=12488): {"lux": 448.33, "time": 1763914957}[0m
+[0;32mI (28555) Ctr: Lux: 448.33, Time: 1763914957 (queued)[0m
+[0;32mI (30555) Ctr: Published OK (id=40960): {"lux": 449.17, "time": 1763914959}[0m
+[0;32mI (30555) Ctr: Lux: 449.17, Time: 1763914959 (queued)[0m
+[0;32mI (32555) Ctr: Published OK (id=46112): {"lux": 449.17, "time": 1763914961}[0m
+[0;32mI (32555) Ctr: Lux: 449.17, Time: 1763914961 (queued)[0m
+[0;32mI (34555) Ctr: Published OK (id=6875): {"lux": 448.33, "time": 1763914963}[0m
+[0;32mI (34555) Ctr: Lux: 448.33, Time: 1763914963 (queued)[0m
+[0;32mI (36555) Ctr: Published OK (id=17666): {"lux": 449.17, "time": 1763914965}[0m
+[0;32mI (36555) Ctr: Lux: 449.17, Time: 1763914965 (queued)[0m
+[0;32mI (38555) Ctr: Published OK (id=45297): {"lux": 448.33, "time": 1763914967}[0m
+[0;32mI (38555) Ctr: Lux: 448.33, Time: 1763914967 (queued)[0m
+[0;32mI (40555) Ctr: Published OK (id=24712): {"lux": 448.33, "time": 1763914969}[0m
+[0;32mI (40555) Ctr: Lux: 448.33, Time: 1763914969 (queued)[0m
+[0;32mI (42555) Ctr: Published OK (id=59599): {"lux": 237.50, "time": 1763914971}[0m
+[0;32mI (42555) Ctr: Lux: 237.50, Time: 1763914971 (queued)[0m
+[0;32mI (44555) Ctr: Published OK (id=38077): {"lux": 345.00, "time": 1763914973}[0m
+[0;32mI (44555) Ctr: Lux: 345.00, Time: 1763914973 (queued)[0m
+[0;32mI (46555) Ctr: Published OK (id=4309): {"lux": 350.83, "time": 1763914975}[0m
+[0;32mI (46555) Ctr: Lux: 350.83, Time: 1763914975 (queued)[0m
+[0;32mI (48555) Ctr: Published OK (id=8138): {"lux": 440.83, "time": 1763914977}[0m
+[0;32mI (48555) Ctr: Lux: 440.83, Time: 1763914977 (queued)[0m
+[0;32mI (50555) Ctr: Published OK (id=19248): {"lux": 447.50, "time": 1763914979}[0m
+[0;32mI (50555) Ctr: Lux: 447.50, Time: 1763914979 (queued)[0m
+[0;32mI (52555) Ctr: Published OK (id=56486): {"lux": 446.67, "time": 1763914981}[0m
+[0;32mI (52555) Ctr: Lux: 446.67, Time: 1763914981 (queued)[0m
+[0;32mI (54555) Ctr: Published OK (id=49696): {"lux": 447.50, "time": 1763914983}[0m
+[0;32mI (54555) Ctr: Lux: 447.50, Time: 1763914983 (queued)[0m
+[0;32mI (56555) Ctr: Published OK (id=26950): {"lux": 448.33, "time": 1763914985}[0m
+[0;32mI (56555) Ctr: Lux: 448.33, Time: 1763914985 (queued)[0m
+[0;32mI (58555) Ctr: Published OK (id=64824): {"lux": 449.17, "time": 1763914987}[0m
+[0;32mI (58555) Ctr: Lux: 449.17, Time: 1763914987 (queued)[0m
+[0;32mI (60555) Ctr: Published OK (id=47752): {"lux": 449.17, "time": 1763914989}[0m
+[0;32mI (60555) Ctr: Lux: 449.17, Time: 1763914989 (queued)[0m
+[0;32mI (62555) Ctr: Published OK (id=47694): {"lux": 449.17, "time": 1763914991}[0m
+[0;32mI (62555) Ctr: Lux: 449.17, Time: 1763914991 (queued)[0m
+[0;32mI (64555) Ctr: Published OK (id=24191): {"lux": 449.17, "time": 1763914993}[0m
+[0;32mI (64555) Ctr: Lux: 449.17, Time: 1763914993 (queued)[0m
+[0;32mI (66555) Ctr: Published OK (id=58501): {"lux": 449.17, "time": 1763914995}[0m
+[0;32mI (66555) Ctr: Lux: 449.17, Time: 1763914995 (queued)[0m
+[0;32mI (68555) Ctr: Published OK (id=57718): {"lux": 449.17, "time": 1763914997}[0m
+[0;32mI (68555) Ctr: Lux: 449.17, Time: 1763914997 (queued)[0m
+[0;32mI (70555) Ctr: Published OK (id=48042): {"lux": 449.17, "time": 1763914999}[0m
+[0;32mI (70555) Ctr: Lux: 449.17, Time: 1763914999 (queued)[0m
+[0;32mI (72555) Ctr: Published OK (id=63976): {"lux": 449.17, "time": 1763915001}[0m
+[0;32mI (72555) Ctr: Lux: 449.17, Time: 1763915001 (queued)[0m
+[0;32mI (74555) Ctr: Published OK (id=41092): {"lux": 449.17, "time": 1763915003}[0m
+[0;32mI (74555) Ctr: Lux: 449.17, Time: 1763915003 (queued)[0m
+[0;32mI (76555) Ctr: Published OK (id=60265): {"lux": 449.17, "time": 1763915005}[0m
+[0;32mI (76555) Ctr: Lux: 449.17, Time: 1763915005 (queued)[0m
+[0;32mI (78555) Ctr: Published OK (id=65204): {"lux": 449.17, "time": 1763915007}[0m
+[0;32mI (78555) Ctr: Lux: 449.17, Time: 1763915007 (queued)[0m
+[0;32mI (80555) Ctr: Published OK (id=58137): {"lux": 450.83, "time": 1763915009}[0m
+[0;32mI (80555) Ctr: Lux: 450.83, Time: 1763915009 (queued)[0m
+[0;32mI (82555) Ctr: Published OK (id=49680): {"lux": 453.33, "time": 1763915011}[0m
+[0;32mI (82555) Ctr: Lux: 453.33, Time: 1763915011 (queued)[0m
+[0;32mI (84555) Ctr: Published OK (id=14407): {"lux": 450.00, "time": 1763915013}[0m
+[0;32mI (84555) Ctr: Lux: 450.00, Time: 1763915013 (queued)[0m
+[0;32mI (86555) Ctr: Published OK (id=17508): {"lux": 451.67, "time": 1763915015}[0m
+[0;32mI (86555) Ctr: Lux: 451.67, Time: 1763915015 (queued)[0m
+[0;32mI (88555) Ctr: Published OK (id=61322): {"lux": 436.67, "time": 1763915017}[0m
+[0;32mI (88555) Ctr: Lux: 436.67, Time: 1763915017 (queued)[0m
+[0;32mI (90555) Ctr: Published OK (id=6248): {"lux": 441.67, "time": 1763915019}[0m
+[0;32mI (90555) Ctr: Lux: 441.67, Time: 1763915019 (queued)[0m
+[0;32mI (92555) Ctr: Published OK (id=36846): {"lux": 435.00, "time": 1763915021}[0m
+[0;32mI (92555) Ctr: Lux: 435.00, Time: 1763915021 (queued)[0m
+[0;32mI (94555) Ctr: Published OK (id=970): {"lux": 448.33, "time": 1763915023}[0m
+[0;32mI (94555) Ctr: Lux: 448.33, Time: 1763915023 (queued)[0m
+[0;32mI (96555) Ctr: Published OK (id=38515): {"lux": 448.33, "time": 1763915025}[0m
+[0;32mI (96555) Ctr: Lux: 448.33, Time: 1763915025 (queued)[0m
+[0;32mI (98555) Ctr: Published OK (id=27838): {"lux": 448.33, "time": 1763915027}[0m
+[0;32mI (98555) Ctr: Lux: 448.33, Time: 1763915027 (queued)[0m
+[0;32mI (100555) Ctr: Published OK (id=1259): {"lux": 448.33, "time": 1763915029}[0m
+[0;32mI (100555) Ctr: Lux: 448.33, Time: 1763915029 (queued)[0m
+[0;32mI (102555) Ctr: Published OK (id=64998): {"lux": 448.33, "time": 1763915031}[0m
+[0;32mI (102555) Ctr: Lux: 448.33, Time: 1763915031 (queued)[0m
+[0;32mI (104555) Ctr: Published OK (id=19979): {"lux": 448.33, "time": 1763915033}[0m
+[0;32mI (104555) Ctr: Lux: 448.33, Time: 1763915033 (queued)[0m
+[0;32mI (106555) Ctr: Published OK (id=54745): {"lux": 448.33, "time": 1763915035}[0m
+[0;32mI (106555) Ctr: Lux: 448.33, Time: 1763915035 (queued)[0m
+[0;32mI (108555) Ctr: Published OK (id=11688): {"lux": 450.83, "time": 1763915037}[0m
+[0;32mI (108555) Ctr: Lux: 450.83, Time: 1763915037 (queued)[0m
+[0;32mI (110555) Ctr: Published OK (id=4215): {"lux": 432.50, "time": 1763915039}[0m
+[0;32mI (110555) Ctr: Lux: 432.50, Time: 1763915039 (queued)[0m
+[0;32mI (112555) Ctr: Published OK (id=8826): {"lux": 432.50, "time": 1763915041}[0m
+[0;32mI (112555) Ctr: Lux: 432.50, Time: 1763915041 (queued)[0m
+[0;32mI (114555) Ctr: Published OK (id=28961): {"lux": 432.50, "time": 1763915043}[0m
+[0;32mI (114555) Ctr: Lux: 432.50, Time: 1763915043 (queued)[0m
+[0;32mI (116555) Ctr: Published OK (id=57213): {"lux": 432.50, "time": 1763915045}[0m
+[0;32mI (116555) Ctr: Lux: 432.50, Time: 1763915045 (queued)[0m
+[0;32mI (118555) Ctr: Published OK (id=16294): {"lux": 432.50, "time": 1763915047}[0m
+[0;32mI (118555) Ctr: Lux: 432.50, Time: 1763915047 (queued)[0m
+[0;32mI (120555) Ctr: Published OK (id=9120): {"lux": 433.33, "time": 1763915049}[0m
+[0;32mI (120555) Ctr: Lux: 433.33, Time: 1763915049 (queued)[0m
+[0;32mI (122555) Ctr: Published OK (id=18804): {"lux": 433.33, "time": 1763915051}[0m
+[0;32mI (122555) Ctr: Lux: 433.33, Time: 1763915051 (queued)[0m
+[0;32mI (124555) Ctr: Published OK (id=28679): {"lux": 420.83, "time": 1763915053}[0m
+[0;32mI (124555) Ctr: Lux: 420.83, Time: 1763915053 (queued)[0m
+[0;32mI (126555) Ctr: Published OK (id=27466): {"lux": 435.83, "time": 1763915055}[0m
+[0;32mI (126555) Ctr: Lux: 435.83, Time: 1763915055 (queued)[0m
+[0;32mI (128555) Ctr: Published OK (id=25184): {"lux": 436.67, "time": 1763915057}[0m
+[0;32mI (128555) Ctr: Lux: 436.67, Time: 1763915057 (queued)[0m
+[0;32mI (130555) Ctr: Published OK (id=23793): {"lux": 436.67, "time": 1763915059}[0m
+[0;32mI (130555) Ctr: Lux: 436.67, Time: 1763915059 (queued)[0m
+[0;32mI (132555) Ctr: Published OK (id=63478): {"lux": 437.50, "time": 1763915061}[0m
+[0;32mI (132555) Ctr: Lux: 437.50, Time: 1763915061 (queued)[0m
+[0;32mI (134555) Ctr: Published OK (id=46283): {"lux": 437.50, "time": 1763915063}[0m
+[0;32mI (134555) Ctr: Lux: 437.50, Time: 1763915063 (queued)[0m
+[0;32mI (136555) Ctr: Published OK (id=6479): {"lux": 437.50, "time": 1763915065}[0m
+[0;32mI (136555) Ctr: Lux: 437.50, Time: 1763915065 (queued)[0m
+[0;32mI (138555) Ctr: Published OK (id=64306): {"lux": 438.33, "time": 1763915067}[0m
+[0;32mI (138555) Ctr: Lux: 438.33, Time: 1763915067 (queued)[0m
+[0;32mI (140555) Ctr: Published OK (id=16517): {"lux": 438.33, "time": 1763915069}[0m
+[0;32mI (140555) Ctr: Lux: 438.33, Time: 1763915069 (queued)[0m
+[0;32mI (142555) Ctr: Published OK (id=56398): {"lux": 438.33, "time": 1763915071}[0m
+[0;32mI (142555) Ctr: Lux: 438.33, Time: 1763915071 (queued)[0m
+[0;32mI (144555) Ctr: Published OK (id=7311): {"lux": 432.50, "time": 1763915073}[0m
+[0;32mI (144555) Ctr: Lux: 432.50, Time: 1763915073 (queued)[0m
+[0;32mI (146555) Ctr: Published OK (id=39765): {"lux": 433.33, "time": 1763915075}[0m
+[0;32mI (146555) Ctr: Lux: 433.33, Time: 1763915075 (queued)[0m
+[0;32mI (148555) Ctr: Published OK (id=16139): {"lux": 438.33, "time": 1763915077}[0m
+[0;32mI (148555) Ctr: Lux: 438.33, Time: 1763915077 (queued)[0m
+[0;32mI (150555) Ctr: Published OK (id=42942): {"lux": 438.33, "time": 1763915079}[0m
+[0;32mI (150555) Ctr: Lux: 438.33, Time: 1763915079 (queued)[0m
+[0;32mI (152555) Ctr: Published OK (id=56433): {"lux": 437.50, "time": 1763915081}[0m
+[0;32mI (152555) Ctr: Lux: 437.50, Time: 1763915081 (queued)[0m
+[0;32mI (154555) Ctr: Published OK (id=30263): {"lux": 438.33, "time": 1763915083}[0m
+[0;32mI (154555) Ctr: Lux: 438.33, Time: 1763915083 (queued)[0m
+[0;32mI (156555) Ctr: Published OK (id=52500): {"lux": 437.50, "time": 1763915085}[0m
+[0;32mI (156555) Ctr: Lux: 437.50, Time: 1763915085 (queued)[0m
+[0;32mI (158555) Ctr: Published OK (id=29363): {"lux": 438.33, "time": 1763915087}[0m
+[0;32mI (158555) Ctr: Lux: 438.33, Time: 1763915087 (queued)[0m
+[0;32mI (160555) Ctr: Published OK (id=53004): {"lux": 438.33, "time": 1763915089}[0m
+[0;32mI (160555) Ctr: Lux: 438.33, Time: 1763915089 (queued)[0m
+[0;32mI (162555) Ctr: Published OK (id=3499): {"lux": 447.50, "time": 1763915091}[0m
+[0;32mI (162555) Ctr: Lux: 447.50, Time: 1763915091 (queued)[0m

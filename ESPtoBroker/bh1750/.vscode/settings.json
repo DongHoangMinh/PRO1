@@ -1,3 +1,6 @@
 {
-  "idf.pythonInstallPath": "E:\\ESP32\\Espressif\\tools\\idf-python\\3.11.2\\python.exe"
+  "idf.pythonInstallPath": "E:\\ESP32\\Espressif\\tools\\idf-python\\3.11.2\\python.exe",
+  "files.associations": {
+    "cstdint": "c"
+  }
 }

@@ -1,0 +1,333 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 17:30:50[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ee1ch (126492) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=0002ee44 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002ee68 vaddr=3ffb0000 size=011b0h (  4528) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=9fcb0h (654512) map[0m
+[0;32mI (367) esp_image: segment 4: paddr=000cfcd8 vaddr=3ffb11b0 size=02e68h ( 11880) load[0m
+[0;32mI (371) esp_image: segment 5: paddr=000d2b48 vaddr=40080000 size=18d54h (101716) load[0m
+[0;32mI (423) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (423) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (442) cpu_start: Pro cpu start user code[0m
+[0;32mI (442) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (442) app_init: Application information:[0m
+[0;32mI (442) app_init: Project name:     blink[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (449) app_init: Compile time:     Oct 28 2025 17:30:41[0m
+[0;32mI (454) app_init: ELF file SHA256:  a693590ab...[0m
+[0;32mI (459) app_init: ESP-IDF:          v5.4.2-dirty[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB86E0 len 00027920 (158 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 40098D54 len 000072AC (28 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (511) spi_flash: flash io: dio[0m
+[0;33mW (514) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (525) main_task: Started on CPU0[0m
+[0;32mI (535) main_task: Calling app_main()[0m
+[0;32mI (555) Ctr: Khởi tạo I2C và BH1750 thành công[0m
+[0;32mI (555) Ctr: Lux: 0.00, Time: 0 (queued)[0m
+[0;32mI (575) wifi:wifi driver task: 3ffc8eb8, prio:23, stack:6656, core=0[0m
+[0;32mI (585) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (585) wifi:wifi certification version: v7.0[0m
+[0;32mI (585) wifi:config NVS flash: enabled[0m
+[0;32mI (585) wifi:config nano formatting: disabled[0m
+[0;32mI (585) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (595) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (595) wifi:Init management short buffer num: 32[0m
+[0;32mI (605) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (605) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (615) wifi:Init static rx buffer num: 10[0m
+[0;32mI (615) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (625) wifi_init: rx ba win: 6[0m
+[0;32mI (625) wifi_init: accept mbox: 6[0m
+[0;32mI (625) wifi_init: tcpip mbox: 32[0m
+[0;32mI (625) wifi_init: udp mbox: 6[0m
+[0;32mI (635) wifi_init: tcp mbox: 6[0m
+[0;32mI (635) wifi_init: tcp tx win: 5760[0m
+[0;32mI (635) wifi_init: tcp rx win: 5760[0m
+[0;32mI (635) wifi_init: tcp mss: 1440[0m
+[0;32mI (645) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (645) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (655) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (655) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (745) wifi:mode : sta (38:18:2b:e9:90:0c)[0m
+[0;32mI (745) wifi:enable tsf[0m
+[0;32mI (755) Ctr: WiFi init[0m
+[1;31mE (755) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (755) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (765) mqtt_client: Error transport connect[0m
+[0;32mI (765) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0W (765) Ctr: MQTT DISCONNECTED[0m
+
+[0;32mI (775) wifi:state: init -> auth (0xb0)[0m
+[0;33mW (765) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (765) main_task: Returned from app_main()[0m
+[0;32mI (785) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (805) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (825) wifi:connected with E, aid = 1, channel 6, BW20, bssid = ee:df:76:3a:e3:c6[0m
+[0;32mI (825) wifi:security: WPA2-PSK, phy: bgn, rssi: -15[0m
+[0;32mI (835) wifi:pm start, type: 1[0m
+
+[0;32mI (835) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (845) wifi:<ba-add>idx:0 (ifx:0, ee:df:76:3a:e3:c6), tid:0, ssn:0, winSize:64[0m
+[0;32mI (905) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (905) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;33mW (1785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (1865) esp_netif_handlers: sta ip: 10.223.122.1, mask: 255.255.255.0, gw: 10.223.122.204[0m
+[0;32mI (1865) Ctr: WiFi got IP[0m
+[0;32mI (1865) Ctr: Đang đồng bộ thời gian NTP...[0m
+[0;32mI (1865) Ctr: Reconnecting MQTT...[0m
+[0;32mI (1865) mqtt_client: Client force reconnect requested[0m
+[0;32mI (2555) Ctr: Lux: 433.33, Time: 2 (queued)[0m
+[0;33mW (2785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (3785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (4555) Ctr: Lux: 433.33, Time: 4 (queued)[0m
+[0;33mW (4785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (5785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (6555) Ctr: Lux: 432.50, Time: 6 (queued)[0m
+[0;33mW (6785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (7785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (8555) Ctr: Lux: 438.33, Time: 8 (queued)[0m
+[0;33mW (8785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (8875) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8875) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (8875) mqtt_client: Error transport connect[0m
+[0;33mW (8875) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (9785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (10555) Ctr: Lux: 430.83, Time: 10 (queued)[0m
+[0;33mW (10785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (11785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (12555) Ctr: Lux: 428.33, Time: 12 (queued)[0m
+[0;33mW (12785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (13785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (14555) Ctr: Lux: 429.17, Time: 14 (queued)[0m
+[0;33mW (14785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (15785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (16555) Ctr: Lux: 446.67, Time: 16 (queued)[0m
+[0;33mW (16785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (17785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (18555) Ctr: Lux: 440.83, Time: 18 (queued)[0m
+[0;33mW (18785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (19785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (20555) Ctr: Lux: 445.83, Time: 20 (queued)[0m
+[0;33mW (20785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (21785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (22555) Ctr: Lux: 441.67, Time: 22 (queued)[0m
+[0;33mW (22785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (23785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (24555) Ctr: Lux: 444.17, Time: 24 (queued)[0m
+[0;33mW (24785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (25785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (25875) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (25875) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (25875) mqtt_client: Error transport connect[0m
+[0;33mW (25875) Ctr: MQTT DISCONNECTED[0m
+[0;32mI (26555) Ctr: Lux: 447.50, Time: 26 (queued)[0m
+[0;33mW (26785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (27785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (28555) Ctr: Lux: 447.50, Time: 28 (queued)[0m
+[0;33mW (28785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (29785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (30555) Ctr: Lux: 446.67, Time: 30 (queued)[0m
+[0;33mW (30785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (31785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (32555) Ctr: Lux: 446.67, Time: 32 (queued)[0m
+[0;33mW (32785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (33785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (34555) Ctr: Lux: 439.17, Time: 34 (queued)[0m
+[0;33mW (34785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (35785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (36555) Ctr: Lux: 447.50, Time: 36 (queued)[0m
+[0;33mW (36785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (37785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (38555) Ctr: Lux: 447.50, Time: 38 (queued)[0m
+[0;33mW (38785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (39785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (40555) Ctr: Lux: 447.50, Time: 40 (queued)[0m
+[0;33mW (40785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (41785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (42555) Ctr: Lux: 445.83, Time: 42 (queued)[0m
+[0;33mW (42785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (43785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (44555) Ctr: Lux: 445.00, Time: 44 (queued)[0m
+[0;33mW (44785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (45785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (46555) Ctr: Lux: 445.00, Time: 46 (queued)[0m
+[0;33mW (46785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (47785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (48555) Ctr: Lux: 452.50, Time: 48 (queued)[0m
+[0;33mW (48785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (49785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (49895) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (49895) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (49895) mqtt_client: Error transport connect[0m
+[0;33mW (49895) Ctr: MQTT DISCONNECTED[0m
+[0;32mI (50555) Ctr: Lux: 454.17, Time: 50 (queued)[0m
+[0;33mW (50785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (51785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (52555) Ctr: Lux: 454.17, Time: 52 (queued)[0m
+[0;33mW (52785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (53785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (54555) Ctr: Lux: 455.83, Time: 54 (queued)[0m
+[0;33mW (54785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (55785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (56555) Ctr: Lux: 453.33, Time: 56 (queued)[0m
+[0;33mW (56785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (57785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (58555) Ctr: Lux: 456.67, Time: 58 (queued)[0m
+[0;33mW (58785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (59785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (60555) Ctr: Lux: 456.67, Time: 60 (queued)[0m
+[0;33mW (60785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (61785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (62555) Ctr: Lux: 455.83, Time: 62 (queued)[0m
+[0;33mW (62785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (63785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (64555) Ctr: Lux: 455.83, Time: 64 (queued)[0m
+[0;33mW (64785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (65785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (66555) Ctr: Lux: 452.50, Time: 66 (queued)[0m
+[0;33mW (66785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (67785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (68555) Ctr: Lux: 451.67, Time: 68 (queued)[0m
+[0;33mW (68785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (69785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (70555) Ctr: Lux: 451.67, Time: 70 (queued)[0m
+[0;33mW (70785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (71785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (72555) Ctr: Lux: 447.50, Time: 72 (queued)[0m
+[0;33mW (72785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (73785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (74555) Ctr: Lux: 431.67, Time: 74 (queued)[0m
+[0;33mW (74785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (74905) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (74905) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (74905) mqtt_client: Error transport connect[0m
+[0;33mW (74905) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (75785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (76555) Ctr: Lux: 448.33, Time: 76 (queued)[0m
+[0;33mW (76785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (77785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (78555) Ctr: Lux: 449.17, Time: 78 (queued)[0m
+[0;33mW (78785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (79785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (80555) Ctr: Lux: 448.33, Time: 80 (queued)[0m
+[0;33mW (80785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (81785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (82555) Ctr: Lux: 442.50, Time: 82 (queued)[0m
+[0;33mW (82785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (83785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (84555) Ctr: Lux: 445.00, Time: 84 (queued)[0m
+[0;33mW (84785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (85785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (86555) Ctr: Lux: 440.00, Time: 86 (queued)[0m
+[0;33mW (86785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (87785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (88555) Ctr: Lux: 447.50, Time: 88 (queued)[0m
+[0;33mW (88785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (89785) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (90555) Ctr: Lux: 450.83, Time: 90 (queued)[0m
+[0;32mI (90735) Ctr: MQTT CONNECTED[0m
+[0;32mI (90785) Ctr: Đã publish: {"lux": 0.00, "time": 0}[0m
+[0;32mI (90785) Ctr: Đã publish: {"lux": 433.33, "time": 2}[0m
+[0;32mI (90795) Ctr: Đã publish: {"lux": 433.33, "time": 4}[0m
+[0;32mI (90795) Ctr: Đã publish: {"lux": 432.50, "time": 6}[0m
+[0;32mI (90795) Ctr: Đã publish: {"lux": 438.33, "time": 8}[0m
+[0;32mI (90805) Ctr: Đã publish: {"lux": 430.83, "time": 10}[0m
+[0;32mI (90805) Ctr: Đã publish: {"lux": 428.33, "time": 12}[0m
+[0;32mI (90815) Ctr: Đã publish: {"lux": 429.17, "time": 14}[0m
+[0;32mI (90815) Ctr: Đã publish: {"lux": 446.67, "time": 16}[0m
+[0;32mI (90825) Ctr: Đã publish: {"lux": 440.83, "time": 18}[0m
+[0;32mI (90825) Ctr: Đã publish: {"lux": 445.83, "time": 20}[0m
+[0;32mI (90835) Ctr: Đã publish: {"lux": 441.67, "time": 22}[0m
+[0;32mI (90835) Ctr: Đã publish: {"lux": 444.17, "time": 24}[0m
+[0;32mI (90845) Ctr: Đã publish: {"lux": 447.50, "time": 26}[0m
+[0;32mI (90845) Ctr: Đã publish: {"lux": 447.50, "time": 28}[0m
+[0;32mI (90855) Ctr: Đã publish: {"lux": 446.67, "time": 30}[0m
+[0;32mI (90855) Ctr: Đã publish: {"lux": 446.67, "time": 32}[0m
+[0;32mI (90865) Ctr: Đã publish: {"lux": 439.17, "time": 34}[0m
+[0;32mI (90865) Ctr: Đã publish: {"lux": 447.50, "time": 36}[0m
+[0;32mI (90875) Ctr: Đã publish: {"lux": 447.50, "time": 38}[0m
+[0;32mI (90875) Ctr: Đã publish: {"lux": 447.50, "time": 40}[0m
+[0;32mI (90885) Ctr: Đã publish: {"lux": 445.83, "time": 42}[0m
+[0;32mI (90885) Ctr: Đã publish: {"lux": 445.00, "time": 44}[0m
+[0;32mI (90895) Ctr: Đã publish: {"lux": 445.00, "time": 46}[0m
+[0;32mI (90895) Ctr: Đã publish: {"lux": 452.50, "time": 48}[0m
+[0;32mI (90905) Ctr: Đã publish: {"lux": 454.17, "time": 50}[0m
+[0;32mI (90905) Ctr: Đã publish: {"lux": 454.17, "time": 52}[0m
+[0;32mI (90915) Ctr: Đã publish: {"lux": 455.83, "time": 54}[0m
+[0;32mI (90915) Ctr: Đã publish: {"lux": 453.33, "time": 56}[0m
+[0;32mI (90925) Ctr: Đã publish: {"lux": 456.67, "time": 58}[0m
+[0;32mI (90935) Ctr: Đã publish: {"lux": 456.67, "time": 60}[0m
+[0;32mI (90935) Ctr: Đã publish: {"lux": 455.83, "time": 62}[0m
+[0;32mI (90935) Ctr: Đã publish: {"lux": 455.83, "time": 64}[0m
+[0;32mI (90945) Ctr: Đã publish: {"lux": 452.50, "time": 66}[0m
+[0;32mI (90945) Ctr: Đã publish: {"lux": 451.67, "time": 68}[0m
+[0;32mI (90955) Ctr: Đã publish: {"lux": 451.67, "time": 70}[0m
+[0;32mI (90955) Ctr: Đã publish: {"lux": 447.50, "time": 72}[0m
+[0;32mI (90965) Ctr: Đã publish: {"lux": 431.67, "time": 74}[0m
+[0;32mI (90965) Ctr: Đã publish: {"lux": 448.33, "time": 76}[0m
+[0;32mI (90975) Ctr: Đã publish: {"lux": 449.17, "time": 78}[0m
+[0;32mI (90975) Ctr: Đã publish: {"lux": 448.33, "time": 80}[0m
+[0;32mI (90985) Ctr: Đã publish: {"lux": 442.50, "time": 82}[0m
+[0;32mI (90985) Ctr: Đã publish: {"lux": 445.00, "time": 84}[0m
+[0;32mI (90995) Ctr: Đã publish: {"lux": 440.00, "time": 86}[0m
+[0;32mI (90995) Ctr: Đã publish: {"lux": 447.50, "time": 88}[0m
+[0;32mI (91005) Ctr: Đã publish: {"lux": 450.83, "time": 90}[0m
+[0;32mI (92555) Ctr: Đã publish: {"lux": 450.83, "time": 92}[0m
+[0;32mI (92555) Ctr: Lux: 450.83, Time: 92 (queued)[0m
+[0;32mI (94555) Ctr: Đã publish: {"lux": 451.67, "time": 94}[0m
+[0;32mI (94555) Ctr: Lux: 451.67, Time: 94 (queued)[0m
+[0;32mI (96555) Ctr: Đã publish: {"lux": 452.50, "time": 96}[0m
+[0;32mI (96555) Ctr: Lux: 452.50, Time: 96 (queued)[0m
+[0;32mI (98555) Ctr: Đã publish: {"lux": 451.67, "time": 98}[0m
+[0;32mI (98555) Ctr: Lux: 451.67, Time: 98 (queued)[0m
+[0;32mI (100555) Ctr: Đã publish: {"lux": 451.67, "time": 100}[0m
+[0;32mI (100555) Ctr: Lux: 451.67, Time: 100 (queued)[0m
+[0;32mI (102555) Ctr: Đã publish: {"lux": 446.67, "time": 102}[0m
+[0;32mI (102555) Ctr: Lux: 446.67, Time: 102 (queued)[0m
+[0;32mI (104555) Ctr: Đã publish: {"lux": 445.83, "time": 104}[0m
+[0;32mI (104555) Ctr: Lux: 445.83, Time: 104 (queued)[0m
+[0;32mI (106555) Ctr: Đã publish: {"lux": 446.67, "time": 106}[0m
+[0;32mI (106555) Ctr: Lux: 446.67, Time: 106 (queued)[0m
+[0;32mI (108555) Ctr: Đã publish: {"lux": 446.67, "time": 108}[0m
+[0;32mI (108555) Ctr: Lux: 446.67, Time: 108 (queued)[0m
+[0;32mI (110555) Ctr: Đã publish: {"lux": 445.83, "time": 110}[0m
+[0;32mI (110555) Ctr: Lux: 445.83, Time: 110 (queued)[0m
+[0;32mI (112555) Ctr: Đã publish: {"lux": 445.00, "time": 112}[0m
+[0;32mI (112555) Ctr: Lux: 445.00, Time: 112 (queued)[0m
+[0;32mI (114555) Ctr: Đã publish: {"lux": 445.00, "time": 114}[0m
+[0;32mI (114555) Ctr: Lux: 445.00, Time: 114 (queued)[0m
+[0;32mI (116555) Ctr: Đã publish: {"lux": 445.00, "time": 116}[0m
+[0;32mI (116555) Ctr: Lux: 445.00, Time: 116 (queued)[0m
+[0;32mI (118555) Ctr: Đã publish: {"lux": 120.00, "time": 118}[0m
+[0;32mI (118555) Ctr: Lux: 120.00, Time: 118 (queued)[0m

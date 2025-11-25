@@ -1,0 +1,201 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct 28 2025 17:30:50[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ee1ch (126492) map[0m
+[0;32mI (132) esp_image: segment 1: paddr=0002ee44 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (132) esp_image: segment 2: paddr=0002ee68 vaddr=3ffb0000 size=011b0h (  4528) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=9fcach (654508) map[0m
+[0;32mI (367) esp_image: segment 4: paddr=000cfcd4 vaddr=3ffb11b0 size=02e68h ( 11880) load[0m
+[0;32mI (371) esp_image: segment 5: paddr=000d2b44 vaddr=40080000 size=18d54h (101716) load[0m
+[0;32mI (423) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (423) boot: Disabling RNG early entropy source...[0m
+[0;32mI (434) cpu_start: Multicore app[0m
+[0;32mI (442) cpu_start: Pro cpu start user code[0m
+[0;32mI (442) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (442) app_init: Application information:[0m
+[0;32mI (442) app_init: Project name:     blink[0m
+[0;32mI (446) app_init: App version:      1[0m
+[0;32mI (449) app_init: Compile time:     Oct 28 2025 17:30:41[0m
+[0;32mI (454) app_init: ELF file SHA256:  69ffe8e4b...[0m
+[0;32mI (459) app_init: ESP-IDF:          v5.4.2-dirty[0m
+[0;32mI (463) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (467) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (471) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (475) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (481) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFB86E0 len 00027920 (158 KiB): DRAM[0m
+[0;32mI (491) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (497) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (502) heap_init: At 40098D54 len 000072AC (28 KiB): IRAM[0m
+[0;32mI (509) spi_flash: detected chip: generic[0m
+[0;32mI (511) spi_flash: flash io: dio[0m
+[0;33mW (514) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (525) main_task: Started on CPU0[0m
+[0;32mI (535) main_task: Calling app_main()[0m
+[0;32mI (565) wifi:wifi driver task: 3ffc7ab8, prio:23, stack:6656, core=0[0m
+[0;32mI (575) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (575) wifi:wifi certification version: v7.0[0m
+[0;32mI (575) wifi:config NVS flash: enabled[0m
+[0;32mI (575) wifi:config nano formatting: disabled[0m
+[0;32mI (585) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (585) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (585) wifi:Init management short buffer num: 32[0m
+[0;32mI (595) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (595) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (605) wifi:Init static rx buffer num: 10[0m
+[0;32mI (605) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (615) wifi_init: rx ba win: 6[0m
+[0;32mI (615) wifi_init: accept mbox: 6[0m
+[0;32mI (615) wifi_init: tcpip mbox: 32[0m
+[0;32mI (615) wifi_init: udp mbox: 6[0m
+[0;32mI (625) wifi_init: tcp mbox: 6[0m
+[0;32mI (625) wifi_init: tcp tx win: 5760[0m
+[0;32mI (625) wifi_init: tcp rx win: 5760[0m
+[0;32mI (625) wifi_init: tcp mss: 1440[0m
+[0;32mI (635) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (635) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (645) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (645) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;32mI (735) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (765) wifi:mode : sta (38:18:2b:e9:90:0c)[0m
+[0;32mI (765) wifi:enable tsf[0m
+[0;32mI (765) Ctr: WiFi init[0m
+[0;32mI (775) Ctr: Khởi tạo I2C và BH1750 thành công[0m
+[1;31mE (775) Ctr: Loi doc du lieu BH1750[0m
+[1;31mE (775) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (785) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (785) mqtt_client: Error transport connect[0m
+[0;33mW (795) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;32mI (795) main_task: Returned from app_main()[0m
+[0;33mW (1795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (2775) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (2795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (3185) Ctr: Retrying WiFi... (1/1000)[0m
+[0;33mW (3795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (4775) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (4795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (5605) Ctr: Retrying WiFi... (2/1000)[0m
+[0;33mW (5795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (6795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (7515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (7795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (8025) Ctr: Retrying WiFi... (3/1000)[0m
+[0;33mW (8795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (9795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (10435) Ctr: Retrying WiFi... (4/1000)[0m
+[1;31mE (10515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (10795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (11795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (12795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (12855) Ctr: Retrying WiFi... (5/1000)[0m
+[1;31mE (13515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (13795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (14795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (15275) Ctr: Retrying WiFi... (6/1000)[0m
+[0;33mW (15795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (15795) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (15795) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (15795) mqtt_client: Error transport connect[0m
+[0;33mW (15805) Ctr: MQTT DISCONNECTED[0m
+[1;31mE (16515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (16795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (17685) Ctr: Retrying WiFi... (7/1000)[0m
+[0;33mW (17795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (18795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (19515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (19795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (20105) Ctr: Retrying WiFi... (8/1000)[0m
+[0;33mW (20795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (21795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (22515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (22525) Ctr: Retrying WiFi... (9/1000)[0m
+[0;33mW (22795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (23795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (24795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (24935) Ctr: Retrying WiFi... (10/1000)[0m
+[1;31mE (25515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (25795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (26795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (27355) Ctr: Retrying WiFi... (11/1000)[0m
+[0;33mW (27795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (28515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (28795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (29775) Ctr: Retrying WiFi... (12/1000)[0m
+[0;33mW (29795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (30795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (30805) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (30805) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (30805) mqtt_client: Error transport connect[0m
+[0;33mW (30805) Ctr: MQTT DISCONNECTED[0m
+[1;31mE (31515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (31795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (32185) Ctr: Retrying WiFi... (13/1000)[0m
+[0;33mW (32795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (33795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (34515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (34605) Ctr: Retrying WiFi... (14/1000)[0m
+[0;33mW (34795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (35795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (36795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (37025) Ctr: Retrying WiFi... (15/1000)[0m
+[1;31mE (37515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (37795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (38795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (39435) Ctr: Retrying WiFi... (16/1000)[0m
+[0;33mW (39795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (40515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (40795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (40815) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (40815) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (40815) mqtt_client: Error transport connect[0m
+[0;33mW (40815) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (41795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (41855) Ctr: Retrying WiFi... (17/1000)[0m
+[0;33mW (42795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (43515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (43795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (44275) Ctr: Retrying WiFi... (18/1000)[0m
+[0;33mW (44795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (45795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (46515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (46685) Ctr: Retrying WiFi... (19/1000)[0m
+[0;33mW (46795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (47795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (48515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (48795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (49105) Ctr: Retrying WiFi... (20/1000)[0m
+[0;33mW (49795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (50795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[1;31mE (50825) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (50825) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (50825) mqtt_client: Error transport connect[0m
+[0;33mW (50825) Ctr: MQTT DISCONNECTED[0m
+[1;31mE (51515) Ctr: Loi doc du lieu BH1750[0m
+[0;33mW (51525) Ctr: Retrying WiFi... (21/1000)[0m
+[0;33mW (51795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (52795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (53795) Ctr: MQTT chưa sẵn sàng, chờ 1s...[0m
+[0;33mW (53935) Ctr: Retrying WiFi... (22/1000)[0m
