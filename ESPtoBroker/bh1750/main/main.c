@@ -24,8 +24,8 @@ EventGroupHandle_t system_event_group;
 #define MQTT_CONNECTED_BIT BIT1
 
 // Cấu hình Wifi
-#define WIFI_SSID "E"
-#define WIFI_PASS "bxgb6539"
+#define WIFI_SSID "M"
+#define WIFI_PASS "12345678"
 #define WIFI_MAXIMUM_RETRY 1000
 
 // Cấu hình mqtt
@@ -40,8 +40,8 @@ EventGroupHandle_t system_event_group;
 #define I2C_MASTER_TX_BUF_DISABLE 0
 #define I2C_MASTER_RX_BUF_DISABLE 0
 // Địa chỉ cảm biến
-#define BH1750_ADDR 0x23 // hoặc 0x5C nếu ADDR nối VCC
-                         // Các lệnh BH1750
+#define BH1750_ADDR 0x23
+
 #define BH1750_POWER_ON 0x01
 #define BH1750_RESET 0x07
 #define BH1750_CONT_H_RES_MODE 0x10 // Chế độ đo liên tục độ phân giải cao
@@ -51,7 +51,7 @@ typedef struct
     float lux;
     time_t time;
 } lux_data;
-#define QUEUE_LENGTH 1800
+#define QUEUE_LENGTH 400
 #define QUEUE_ITEM_SIZE sizeof(lux_data)
 #define READ_INTERVAL_MS 2000
 static QueueHandle_t lux_queue; // lux_queue
@@ -65,22 +65,21 @@ time_t get_current_time()
     time(&now);
 
     if (now >= 1000000000)
-    { // NTP đã sync
+    {  
         last_timestamp = now;
         last_tick_us = esp_timer_get_time();
         return now;
 
-    } // NTP fail fallback
+    }  
     if (last_timestamp > 0)
     {
         int64_t delta_us = esp_timer_get_time() - last_tick_us;
         return last_timestamp + delta_us / 1000000;
-    } // Lần đầu tiên, chưa sync NTP
+    } 
     return esp_timer_get_time() / 1000000;
 }
 
-// Hàm khởi tạo I2C cho ÉP32(master)
-static esp_err_t i2c_master_init(void)
+ static esp_err_t i2c_master_init(void)
 {
     i2c_config_t conf = {
         .mode = I2C_MODE_MASTER,
@@ -90,22 +89,22 @@ static esp_err_t i2c_master_init(void)
         .scl_pullup_en = GPIO_PULLUP_ENABLE,
         .master.clk_speed = I2C_MASTER_FREQ_HZ,
     };
-    ESP_ERROR_CHECK(i2c_param_config(I2C_MASTER_NUM, &conf)); // check lỗi, gửi cấu hình đén drive I2C
-    return i2c_driver_install(I2C_MASTER_NUM, conf.mode,      // cai dat drive I2C
+    ESP_ERROR_CHECK(i2c_param_config(I2C_MASTER_NUM, &conf));  
+    return i2c_driver_install(I2C_MASTER_NUM, conf.mode,       
                               I2C_MASTER_RX_BUF_DISABLE,
                               I2C_MASTER_TX_BUF_DISABLE, 0);
 }
 
 esp_err_t bh1750_write_cmd(uint8_t cmd)
 {
-    i2c_cmd_handle_t handle = i2c_cmd_link_create(); // chuỗi lệnh I2C
+    i2c_cmd_handle_t handle = i2c_cmd_link_create();  
     i2c_master_start(handle);
-    i2c_master_write_byte(handle, (BH1750_ADDR << 1) | I2C_MASTER_WRITE, true); // lùi 1 bit , W, ACK
-    i2c_master_write_byte(handle, cmd, true);                                   // bit lệnh
-    i2c_master_stop(handle);                                                    // kết thúc giao tiếp
+    i2c_master_write_byte(handle, (BH1750_ADDR << 1) | I2C_MASTER_WRITE, true);  
+    i2c_master_write_byte(handle, cmd, true);                                    
+    i2c_master_stop(handle); 
     esp_err_t ret = i2c_master_cmd_begin(I2C_MASTER_NUM, handle, pdMS_TO_TICKS(1000));
-    i2c_cmd_link_delete(handle); // xóa handle
-    return ret;                  // OK or Error
+    i2c_cmd_link_delete(handle);  
+    return ret;                  
 }
 
 // Đọc giá trị ánh sáng
@@ -134,6 +133,7 @@ float bh1750_read_lux()
 // ntp
 void time_ntp(void)
 {
+    esp_sntp_stop();
     ESP_LOGI(TAG, "Đang đồng bộ thời gian NTP...");
     esp_sntp_setoperatingmode(SNTP_OPMODE_POLL);
     esp_sntp_setservername(0, "vn.pool.ntp.org");
@@ -259,20 +259,18 @@ void mqtt_publish_task(void *pvParameters)
 
     while (1)
     {
-        // Chờ MQTT có kết nối thật sự
-        xEventGroupWaitBits(system_event_group,
+         xEventGroupWaitBits(system_event_group,
                             MQTT_CONNECTED_BIT,
                             false, true,
                             portMAX_DELAY);
 
-        // Khi MQTT đã sẵn sàng → lấy dữ liệu từ queue
-        if (xQueueReceive(lux_queue, &item, portMAX_DELAY) == pdPASS)
+         if (xQueueReceive(lux_queue, &item, portMAX_DELAY) == pdPASS)
         {
             char msg[128];
-            snprintf(msg, sizeof(msg),
-                     "{\"lux\": %.2f, \"time\": %lld}",
-                     item.lux, (long long)item.time);
 
+            snprintf(msg, sizeof(msg),
+                     "{\"lux\": %.2f, \"time\": %lld,\"device\": \"esp345\", \"location\": \"Room4\"}",
+                     item.lux, (long long)item.time);
             int msg_id = esp_mqtt_client_publish(
                 mqtt_client,
                 "esp32/luxbh1750",
@@ -295,7 +293,7 @@ void mqtt_publish_task(void *pvParameters)
     }
 }
 
-// app_main
+
 void app_main(void)
 {
     ESP_ERROR_CHECK(nvs_flash_init());
@@ -314,8 +312,7 @@ void app_main(void)
     xTaskCreatePinnedToCore(Luxntime_read, "Luxntime_read", 4096, NULL, 5, NULL, 0);
     wifi_init_sta();
 
-    // xEventGroupWaitBits(system_event_group, WIFI_CONNECTED_BIT, false, true, portMAX_DELAY);
-
+ 
     mqtt_start();
 
     xTaskCreatePinnedToCore(mqtt_publish_task, "mqtt_publish_task", 8192, NULL, 6, NULL, 0);

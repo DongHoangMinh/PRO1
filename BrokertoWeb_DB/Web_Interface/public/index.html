@@ -1,21 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BH1750</title>
+  <title>IoT Light Dashboard</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+      --primary: #2563eb;
+      --text-main: #1e293b;
+      --text-sub: #64748b;
+      --border-color: #e2e8f0;
+      --radius-lg: 16px;
+      --radius-md: 12px;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    }
+
+    * {
+      box-sizing: border-box;
+      transition: all 0.2s ease-in-out;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-main);
+      padding: 20px;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* ===== LOCATION GRID ===== */
+    #locations {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 24px;
+    }
+
+    /* ===== LOCATION CARD (Viền bo lớn) ===== */
+    .location {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .location-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f1f5f9;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* ===== DEVICE LIST ===== */
+    .devices {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    /* ===== DEVICE CARD (Bo góc hiện đại) ===== */
+    .device {
+      background: #fdfdfd;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .device:hover {
+      border-color: var(--primary);
+      box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .device-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .device-name {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-main);
+    }
+
+    /* Đèn báo trạng thái IoT */
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #10b981;
+      /* Xanh - Online */
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 8px #10b981;
+    }
+
+    .mini-chart {
+      width: 100%;
+      height: 60px;
+      background: #f8fafc;
+      border-radius: 8px;
+    }
+
+    /* ===== DETAIL PANEL ===== */
+    #detail {
+      display: none;
+      background: var(--card-bg);
+      margin-top: 30px;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+    }
+
+    #detailTitle {
+      margin: 0 0 20px 0;
+      font-size: 1.25rem;
+    }
+
+    .detail-chart {
+      width: 100%;
+      height: 350px;
+      background: #fff;
+      padding: 10px;
+      border-radius: var(--radius-md);
+    }
+
+    /* ===== TABLE & CONTROLS ===== */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-top: 20px;
+    }
+
+    th {
+      background: #f1f5f9;
+      color: var(--text-sub);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 11px;
+      padding: 12px;
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 13px;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    /* ===== BUTTONS ===== */
+    button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      margin-right: 8px;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+      filter: brightness(1.1);
+    }
+
+    input[type="datetime-local"] {
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      outline: none;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Giá trị của cảm biến:</h1>
-  <div id="lux">-- lux</div>
-  <div id="time">Last update: --:--:--</div>
-  <div id="status">Chưa có dữ liệu</div>
-  <button onclick="location.href='/filter'">Lọc dữ liệu</button>
 
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/client.js"></script>
+  <h2> IoT Light Dashboard</h2>
+
+  <div id="locations"></div>
+
+  <div id="detail">
+    <h3 id="detailTitle">Chi tiết thiết bị</h3>
+    <div class="detail-chart">
+      <canvas id="detailChart"></canvas>
+    </div>
+
+    <div style="margin-top: 20px;">
+      From <input type="datetime-local" id="from">
+      To <input type="datetime-local" id="to">
+      <button onclick="filterData()">Lọc dữ liệu</button><button onclick="exportCSV()">Xuất CSV</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Thời gian</th>
+          <th>Cường độ (Lux)</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <div style="margin-top: 15px;">
+      <button onclick="prevPage()">⬅ Trước</button>
+      <button onclick="nextPage()">Sau ➡</button>
+    </div>
+  </div>
+
+  <script src="chart.js"></script>
+  <script src="logic.js"></script>
 
 </body>
 

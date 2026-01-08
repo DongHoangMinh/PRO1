@@ -1,0 +1,106 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec  8 2025 21:57:50[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=244fch (148732) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=00034524 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=00034548 vaddr=3ffb0000 size=040e0h ( 16608) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=00038630 vaddr=40080000 size=079e8h ( 31208) load[0m
+[0;32mI (163) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=a1d8ch (662924) map[0m
+[0;32mI (390) esp_image: segment 5: paddr=000e1db4 vaddr=400879e8 size=114c8h ( 70856) load[0m
+[0;32mI (429) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (429) boot: Disabling RNG early entropy source...[0m
+[0;33mW (451) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (492) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[1;31mE (592) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (592) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (592) mqtt_client: Error transport connect[0m
+[0;33mW (602) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (852) Ctr: Retrying WiFi... (1/1000)[0m
+[0;33mW (932) wifi:tx null, bss is null[0m
+[0;33mW (3272) Ctr: Retrying WiFi... (2/1000)[0m
+[1;31mE (27872) transport_base: tcp_read error, errno=Software caused connection abort[0m
+[1;31mE (27872) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=113[0m
+[0;33mW (27882) Ctr: Retrying WiFi... (1/1000)[0m
+[1;31mE (27882) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;33mW (27892) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (28162) Ctr: Retrying WiFi... (2/1000)[0m
+[0;33mW (30582) Ctr: Retrying WiFi... (3/1000)[0m
+[0;33mW (33012) Ctr: Retrying WiFi... (4/1000)[0m
+[0;33mW (35432) Ctr: Retrying WiFi... (5/1000)[0m
+[0;33mW (37852) Ctr: Retrying WiFi... (6/1000)[0m
+[0;33mW (40272) Ctr: Retrying WiFi... (7/1000)[0m
+
+assert failed: sntp_setoperatingmode /IDF/components/lwip/lwip/src/apps/sntp/sntp.c:748 (Operating mode must not be set while SNTP client is running)
+
+
+Backtrace: 0x40081cb5:0x3ffbfa60 0x4008aa5d:0x3ffbfa80 0x40092899:0x3ffbfaa0 0x400e5695:0x3ffbfbc0 0x400e4ef2:0x3ffbfbe0 0x400e512d:0x3ffbfc00 0x400e518d:0x3ffbfc20 0x4008b501:0x3ffbfc50
+
+
+
+
+ELF file SHA256: 9ddf3f7e9
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec  8 2025 21:57:50[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=244fch (148732) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=00034524 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=00034548 vaddr=3ffb0000 size=040e0h ( 16608) load[0m
+[0;32mI (149) esp_image: segment 3: paddr=00038630 vaddr=40080000 size=079e8h ( 31208) load[0m
+[0;32mI (163) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=a1d8ch (662924) map[0m
+[0;32mI (390) esp_image: segment 5: paddr=000e1db4 vaddr=400879e8 size=114c8h ( 70856) load[0m
+[0;32mI (429) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (429) boot: Disabling RNG early entropy source...[0m
+[0;33mW (451) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (492) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[1;31mE (622) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (622) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (622) mqtt_client: Error transport connect[0m
+[0;33mW (632) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1742) Ctr: Retrying WiFi... (1/1000)[0m
+[0;33mW (4162) Ctr: Retrying WiFi... (2/1000)[0m

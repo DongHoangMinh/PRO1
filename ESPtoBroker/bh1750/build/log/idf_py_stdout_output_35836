@@ -1,0 +1,252 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec  8 2025 21:57:50[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (38) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2456ch (148844) map[0m
+[0;32mI (140) esp_image: segment 1: paddr=00034594 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=000345b8 vaddr=3ffb0000 size=040e0h ( 16608) load[0m
+[0;32mI (150) esp_image: segment 3: paddr=000386a0 vaddr=40080000 size=07978h ( 31096) load[0m
+[0;32mI (163) esp_image: segment 4: paddr=00040020 vaddr=400d0020 size=a1e20h (663072) map[0m
+[0;32mI (390) esp_image: segment 5: paddr=000e1e48 vaddr=40087978 size=11538h ( 70968) load[0m
+[0;32mI (429) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (430) boot: Disabling RNG early entropy source...[0m
+[0;33mW (451) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (492) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[1;31mE (612) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (612) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (622) mqtt_client: Error transport connect[0m
+[0;33mW (622) Ctr: MQTT DISCONNECTED[0m
+[1;31mE (1584002) transport_base: tcp_read error, errno=Software caused connection abort[0m
+[1;31mE (1584002) mqtt_client: esp_mqtt_handle_transport_read_error: transport_read() error: errno=113[0m
+[0;33mW (1584012) Ctr: Retrying WiFi... (1/1000)[0m
+[1;31mE (1584012) mqtt_client: mqtt_process_receive: mqtt_message_receive() returned -2[0m
+[0;33mW (1584022) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1586432) Ctr: Retrying WiFi... (2/1000)[0m
+[0;33mW (1588852) Ctr: Retrying WiFi... (3/1000)[0m
+[0;33mW (1591272) Ctr: Retrying WiFi... (4/1000)[0m
+[0;33mW (1593692) Ctr: Retrying WiFi... (5/1000)[0m
+[0;33mW (1596112) Ctr: Retrying WiFi... (6/1000)[0m
+[0;33mW (1598532) Ctr: Retrying WiFi... (7/1000)[0m
+[0;33mW (1600962) Ctr: Retrying WiFi... (8/1000)[0m
+[0;33mW (1603382) Ctr: Retrying WiFi... (9/1000)[0m
+[0;33mW (1605802) Ctr: Retrying WiFi... (10/1000)[0m
+[1;31mE (1606022) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1606022) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1606022) mqtt_client: Error transport connect[0m
+[0;33mW (1606022) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1608222) Ctr: Retrying WiFi... (11/1000)[0m
+[0;33mW (1610642) Ctr: Retrying WiFi... (12/1000)[0m
+[0;33mW (1613062) Ctr: Retrying WiFi... (13/1000)[0m
+[0;33mW (1615492) Ctr: Retrying WiFi... (14/1000)[0m
+[0;33mW (1617912) Ctr: Retrying WiFi... (15/1000)[0m
+[0;33mW (1620332) Ctr: Retrying WiFi... (16/1000)[0m
+[0;33mW (1622752) Ctr: Retrying WiFi... (17/1000)[0m
+[1;31mE (1623032) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1623032) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1623032) mqtt_client: Error transport connect[0m
+[0;33mW (1623032) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1625172) Ctr: Retrying WiFi... (18/1000)[0m
+[0;33mW (1627592) Ctr: Retrying WiFi... (19/1000)[0m
+[0;33mW (1630022) Ctr: Retrying WiFi... (20/1000)[0m
+[0;33mW (1632442) Ctr: Retrying WiFi... (21/1000)[0m
+[0;33mW (1634862) Ctr: Retrying WiFi... (22/1000)[0m
+[0;33mW (1637282) Ctr: Retrying WiFi... (23/1000)[0m
+[0;33mW (1639702) Ctr: Retrying WiFi... (24/1000)[0m
+[1;31mE (1640042) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1640042) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1640042) mqtt_client: Error transport connect[0m
+[0;33mW (1640042) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1642122) Ctr: Retrying WiFi... (25/1000)[0m
+[0;33mW (1644552) Ctr: Retrying WiFi... (26/1000)[0m
+[0;33mW (1646972) Ctr: Retrying WiFi... (27/1000)[0m
+[0;33mW (1649392) Ctr: Retrying WiFi... (28/1000)[0m
+[0;33mW (1651812) Ctr: Retrying WiFi... (29/1000)[0m
+[0;33mW (1654232) Ctr: Retrying WiFi... (30/1000)[0m
+[0;33mW (1656652) Ctr: Retrying WiFi... (31/1000)[0m
+[1;31mE (1657052) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1657052) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1657052) mqtt_client: Error transport connect[0m
+[0;33mW (1657052) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1659082) Ctr: Retrying WiFi... (32/1000)[0m
+[0;33mW (1661502) Ctr: Retrying WiFi... (33/1000)[0m
+[0;33mW (1663922) Ctr: Retrying WiFi... (34/1000)[0m
+[0;33mW (1666342) Ctr: Retrying WiFi... (35/1000)[0m
+[0;33mW (1668762) Ctr: Retrying WiFi... (36/1000)[0m
+[0;33mW (1671182) Ctr: Retrying WiFi... (37/1000)[0m
+[0;33mW (1673602) Ctr: Retrying WiFi... (38/1000)[0m
+[1;31mE (1674062) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1674062) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1674062) mqtt_client: Error transport connect[0m
+[0;33mW (1674062) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1676032) Ctr: Retrying WiFi... (39/1000)[0m
+[0;33mW (1678452) Ctr: Retrying WiFi... (40/1000)[0m
+[0;33mW (1680872) Ctr: Retrying WiFi... (41/1000)[0m
+[0;33mW (1683292) Ctr: Retrying WiFi... (42/1000)[0m
+[0;33mW (1685712) Ctr: Retrying WiFi... (43/1000)[0m
+[0;33mW (1688132) Ctr: Retrying WiFi... (44/1000)[0m
+[0;33mW (1690562) Ctr: Retrying WiFi... (45/1000)[0m
+[1;31mE (1691072) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1691072) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1691072) mqtt_client: Error transport connect[0m
+[0;33mW (1691072) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1692982) Ctr: Retrying WiFi... (46/1000)[0m
+[0;33mW (1695402) Ctr: Retrying WiFi... (47/1000)[0m
+[0;33mW (1697822) Ctr: Retrying WiFi... (48/1000)[0m
+[0;33mW (1700242) Ctr: Retrying WiFi... (49/1000)[0m
+[0;33mW (1702662) Ctr: Retrying WiFi... (50/1000)[0m
+[0;33mW (1705092) Ctr: Retrying WiFi... (51/1000)[0m
+[0;33mW (1707512) Ctr: Retrying WiFi... (52/1000)[0m
+[1;31mE (1708082) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1708082) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1708082) mqtt_client: Error transport connect[0m
+[0;33mW (1708082) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1709932) Ctr: Retrying WiFi... (53/1000)[0m
+[0;33mW (1712352) Ctr: Retrying WiFi... (54/1000)[0m
+[0;33mW (1714772) Ctr: Retrying WiFi... (55/1000)[0m
+[0;33mW (1717192) Ctr: Retrying WiFi... (56/1000)[0m
+[0;33mW (1719622) Ctr: Retrying WiFi... (57/1000)[0m
+[0;33mW (1722042) Ctr: Retrying WiFi... (58/1000)[0m
+[0;33mW (1724462) Ctr: Retrying WiFi... (59/1000)[0m
+[1;31mE (1725092) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1725092) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1725092) mqtt_client: Error transport connect[0m
+[0;33mW (1725092) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1726882) Ctr: Retrying WiFi... (60/1000)[0m
+[0;33mW (1729302) Ctr: Retrying WiFi... (61/1000)[0m
+[0;33mW (1731722) Ctr: Retrying WiFi... (62/1000)[0m
+[0;33mW (1734142) Ctr: Retrying WiFi... (63/1000)[0m
+[0;33mW (1736572) Ctr: Retrying WiFi... (64/1000)[0m
+[0;33mW (1738992) Ctr: Retrying WiFi... (65/1000)[0m
+[0;33mW (1741412) Ctr: Retrying WiFi... (66/1000)[0m
+[1;31mE (1742102) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1742102) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1742102) mqtt_client: Error transport connect[0m
+[0;33mW (1742102) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1743832) Ctr: Retrying WiFi... (67/1000)[0m
+[0;33mW (1746252) Ctr: Retrying WiFi... (68/1000)[0m
+[0;33mW (1748672) Ctr: Retrying WiFi... (69/1000)[0m
+[0;33mW (1751102) Ctr: Retrying WiFi... (70/1000)[0m
+[0;33mW (1753522) Ctr: Retrying WiFi... (71/1000)[0m
+[0;33mW (1755942) Ctr: Retrying WiFi... (72/1000)[0m
+[0;33mW (1758362) Ctr: Retrying WiFi... (73/1000)[0m
+[1;31mE (1759112) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1759112) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1759112) mqtt_client: Error transport connect[0m
+[0;33mW (1759112) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1760782) Ctr: Retrying WiFi... (74/1000)[0m
+[0;33mW (1763202) Ctr: Retrying WiFi... (75/1000)[0m
+[0;33mW (1765622) Ctr: Retrying WiFi... (76/1000)[0m
+[0;33mW (1768052) Ctr: Retrying WiFi... (77/1000)[0m
+[0;33mW (1770472) Ctr: Retrying WiFi... (78/1000)[0m
+[0;33mW (1772892) Ctr: Retrying WiFi... (79/1000)[0m
+[0;33mW (1775312) Ctr: Retrying WiFi... (80/1000)[0m
+[1;31mE (1776122) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1776122) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1776122) mqtt_client: Error transport connect[0m
+[0;33mW (1776122) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1777732) Ctr: Retrying WiFi... (81/1000)[0m
+[0;33mW (1780152) Ctr: Retrying WiFi... (82/1000)[0m
+[0;33mW (1782582) Ctr: Retrying WiFi... (83/1000)[0m
+[0;33mW (1785002) Ctr: Retrying WiFi... (84/1000)[0m
+[0;33mW (1787422) Ctr: Retrying WiFi... (85/1000)[0m
+[0;33mW (1789842) Ctr: Retrying WiFi... (86/1000)[0m
+[0;33mW (1792262) Ctr: Retrying WiFi... (87/1000)[0m
+[1;31mE (1793132) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1793132) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1793132) mqtt_client: Error transport connect[0m
+[0;33mW (1793132) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1794682) Ctr: Retrying WiFi... (88/1000)[0m
+[0;33mW (1797102) Ctr: Retrying WiFi... (89/1000)[0m
+[0;33mW (1799532) Ctr: Retrying WiFi... (90/1000)[0m
+[0;33mW (1801952) Ctr: Retrying WiFi... (91/1000)[0m
+[0;33mW (1804372) Ctr: Retrying WiFi... (92/1000)[0m
+[0;33mW (1806792) Ctr: Retrying WiFi... (93/1000)[0m
+[0;33mW (1809212) Ctr: Retrying WiFi... (94/1000)[0m
+[1;31mE (1810142) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1810142) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1810142) mqtt_client: Error transport connect[0m
+[0;33mW (1810142) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1811632) Ctr: Retrying WiFi... (95/1000)[0m
+[0;33mW (1814062) Ctr: Retrying WiFi... (96/1000)[0m
+[0;33mW (1816482) Ctr: Retrying WiFi... (97/1000)[0m
+[0;33mW (1818902) Ctr: Retrying WiFi... (98/1000)[0m
+[0;33mW (1821322) Ctr: Retrying WiFi... (99/1000)[0m
+[0;33mW (1823742) Ctr: Retrying WiFi... (100/1000)[0m
+[0;33mW (1826162) Ctr: Retrying WiFi... (101/1000)[0m
+[1;31mE (1827152) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1827152) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1827152) mqtt_client: Error transport connect[0m
+[0;33mW (1827152) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1828582) Ctr: Retrying WiFi... (102/1000)[0m
+[0;33mW (1831012) Ctr: Retrying WiFi... (103/1000)[0m
+[0;33mW (1833432) Ctr: Retrying WiFi... (104/1000)[0m
+[0;33mW (1835852) Ctr: Retrying WiFi... (105/1000)[0m
+[0;33mW (1838272) Ctr: Retrying WiFi... (106/1000)[0m
+[0;33mW (1840692) Ctr: Retrying WiFi... (107/1000)[0m
+���������������������������������������������������������������� (1843112) Ctr: Retrying WiFi... (108/1000)
+[1;31mE (1844162) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1844162) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1844162) mqtt_client: Error transport connect[0m
+[0;33mW (1844162) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1845542) Ctr: Retrying WiFi... (109/1000)[0m
+[0;33mW (1847962) Ctr: Retrying WiFi... (110/1000)[0m
+���������������������������������������������������������������� (1850382) Ctr: Retrying WiFi... (111/1000)
+[0;33mW (1852802) Ctr: Retrying WiFi... (112/1000)[0m
+[0;33mW (1855222) Ctr: Retrying WiFi... (113/1000)[0m
+[0;33mW (1857642) Ctr: Retrying WiFi... (114/1000)[0m
+[0;33mW (1860062) Ctr: Retrying WiFi... (115/1000)[0m
+[1;31mE (1861172) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1861172) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1861172) mqtt_client: Error transport connect[0m
+[0;33mW (1861172) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1862492) Ctr: Retrying WiFi... (116/1000)[0m
+[0;33mW (1864912) Ctr: Retrying WiFi... (117/1000)[0m
+[0;33mW (1867332) Ctr: Retrying WiFi... (118/1000)[0m
+[0;33mW (1869752) Ctr: Retrying WiFi... (119/1000)[0m
+[0;33mW (1872172) Ctr: Retrying WiFi... (120/1000)[0m
+[0;33mW (1874592) Ctr: Retrying WiFi... (121/1000)[0m
+[0;33mW (1877022) Ctr: Retrying WiFi... (122/1000)[0m
+[1;31mE (1878182) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1878182) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1878182) mqtt_client: Error transport connect[0m
+[0;33mW (1878182) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1879442) Ctr: Retrying WiFi... (123/1000)[0m
+[0;33mW (1881862) Ctr: Retrying WiFi... (124/1000)[0m
+[0;33mW (1884282) Ctr: Retrying WiFi... (125/1000)[0m
+[0;33mW (1886702) Ctr: Retrying WiFi... (126/1000)[0m
+[0;33mW (1889122) Ctr: Retrying WiFi... (127/1000)[0m
+[0;33mW (1891552) Ctr: Retrying WiFi... (128/1000)[0m
+[0;33mW (1893972) Ctr: Retrying WiFi... (129/1000)[0m
+[1;31mE (1895192) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (1895192) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (1895192) mqtt_client: Error transport connect[0m
+[0;33mW (1895192) Ctr: MQTT DISCONNECTED[0m
+[0;33mW (1896392) Ctr: Retrying WiFi... (130/1000)[0m
+[0;33mW (1898812) Ctr: Retrying WiFi... (131/1000)[0m
+[0;33mW (1901232) Ctr: Retrying WiFi... (132/1000)[0m
+[0;33mW (1903652) Ctr: Retrying WiFi... (133/1000)[0m
+[0;33mW (1906072) Ctr: Retrying WiFi... (134/1000)[0m
+[0;33mW (1908502) Ctr: Retrying WiFi... (135/1000)[0m
+[0;33mW (1910922) Ctr: Retrying WiFi... (136/1000)[0m
+[1;31mE (1912202) esp-tls: couldn't get hostname for :broker.hivemq.com: getaddrinfo() r

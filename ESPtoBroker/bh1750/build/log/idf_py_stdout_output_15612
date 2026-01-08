@@ -1,0 +1,126 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D E:\ESP32\PRO1\ESPtoBroker\bh1750\build\bootloader\esp-idf\esptool_py && E:\ESP32\Espressif\python_env\idf5.4_py3.11_env\Scripts\python.exe E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 E:/ESP32/PRO1/ESPtoBroker/bh1750/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6570 bytes. 0xa90 bytes (9%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
+ccache E:\ESP32\Espressif\tools\xtensa-esp-elf\esp-14.2.0_20241119\xtensa-esp-elf\bin\xtensa-esp32-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.4.2-dirty\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -IE:/ESP32/PRO1/ESPtoBroker/bh1750/build/config -IE:/ESP32/PRO1/ESPtoBroker/bh1750/main -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/newlib/platform_include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/freertos/config/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/freertos/config/include/freertos -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/freertos/config/xtensa/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/freertos/FreeRTOS-Kernel/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/freertos/esp_additions/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_hw_support/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_hw_support/include/soc -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_hw_support/include/soc/esp32 -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_hw_support/dma/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_hw_support/ldo/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_hw_support/debug_probe/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_hw_support/port/esp32/. -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_hw_support/port/esp32/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/heap/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/heap/tlsf -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/log/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/soc/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/soc/esp32 -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/soc/esp32/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/soc/esp32/register -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/hal/platform_port/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/hal/esp32/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/hal/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_rom/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_rom/esp32/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_rom/esp32/include/esp32 -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_rom/esp32 -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_common/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_system/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_system/port/soc -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_system/port/include/private -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/xtensa/esp32/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/xtensa/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/xtensa/deprecated_include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/lwip/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/lwip/include/apps -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/lwip/include/apps/sntp -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/lwip/lwip/src/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/lwip/port/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/lwip/port/freertos/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/lwip/port/esp32xx/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/lwip/port/esp32xx/include/arch -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/lwip/port/esp32xx/include/sys -IE:/ESP32/PRO1/ESPtoBroker/bh1750/managed_components/espressif__led_strip/include -IE:/ESP32/PRO1/ESPtoBroker/bh1750/managed_components/espressif__led_strip/interface -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_rmt/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_spi/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_pm/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_gpio/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/mbedtls/port/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/mbedtls/mbedtls/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/mbedtls/mbedtls/library -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/mbedtls/esp_crt_bundle/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/mbedtls/mbedtls/3rdparty/everest/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/mbedtls/mbedtls/3rdparty/p256-m -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_app_format/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_bootloader_format/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/app_update/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/bootloader_support/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/bootloader_support/bootloader_flash/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_partition/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/efuse/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/efuse/esp32/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_mm/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/spi_flash/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_security/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/pthread/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_timer/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_gptimer/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_ringbuf/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_uart/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/vfs/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/app_trace/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_event/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/nvs_flash/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_pcnt/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_mcpwm/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_ana_cmpr/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_i2s/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/sdmmc/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_sdmmc/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_sdspi/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_sdio/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_dac/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_tsens/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_sdm/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_i2c/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_ledc/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_parlio/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_usb_serial_jtag/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/driver/deprecated -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/driver/i2c/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/driver/touch_sensor/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/driver/twai/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/driver/touch_sensor/esp32/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_phy/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_phy/esp32/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_vfs_console/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_netif/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/wpa_supplicant/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/wpa_supplicant/port/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/wpa_supplicant/esp_supplicant/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_coex/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_wifi/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_wifi/include/local -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_wifi/wifi_apps/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_wifi/wifi_apps/nan_app/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_gdbstub/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/unity/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/unity/unity/src -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/cmock/CMock/src -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/console -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/http_parser -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp-tls -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp-tls/esp-tls-crypto -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_adc/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_adc/interface -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_adc/esp32/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_adc/deprecated/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_isp/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_cam/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_cam/interface -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_psram/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_jpeg/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_driver_ppa/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_eth/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_hid/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/tcp_transport/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_http_client/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_http_server/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_https_ota/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_https_server/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_lcd/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_lcd/interface -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/protobuf-c/protobuf-c -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/protocomm/include/common -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/protocomm/include/security -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/protocomm/include/transports -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/protocomm/include/crypto/srp6a -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/protocomm/proto-c -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_local_ctrl/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/espcoredump/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/espcoredump/include/port/xtensa -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/wear_levelling/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/fatfs/diskio -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/fatfs/src -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/fatfs/vfs -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/idf_test/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/idf_test/include/esp32 -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/ieee802154/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/json/cJSON -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/mqtt/esp-mqtt/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/nvs_sec_provider/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/perfmon/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/rt/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/spiffs/include -IE:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=E:/ESP32/PRO1/ESPtoBroker/bh1750=. -fmacro-prefix-map=E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c
+In file included from E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_hw_support/include/esp_intr_alloc.h:12,
+                 from E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_hw_support/include/esp_cpu.h:20,
+                 from E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_hw_support/include/spinlock.h:11,
+                 from E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:49,
+                 from E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/freertos/FreeRTOS-Kernel/include/freertos/portable.h:57,
+                 from E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:69,
+                 from E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:2:
+E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_common/include/esp_err.h:115:28: error: expected identifier or '(' before 'do'
+  115 | #define ESP_ERROR_CHECK(x) do {                                         \
+      |                            ^~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:312:1: note: in expansion of macro 'ESP_ERROR_CHECK'
+  312 | ESP_ERROR_CHECK(nvs_flash_init());
+      | ^~~~~~~~~~~~~~~
+E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_common/include/esp_err.h:121:7: error: expected identifier or '(' before 'while'
+  121 |     } while(0)
+      |       ^~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:312:1: note: in expansion of macro 'ESP_ERROR_CHECK'
+  312 | ESP_ERROR_CHECK(nvs_flash_init());
+      | ^~~~~~~~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:313:1: warning: data definition has no type or storage class
+  313 | system_event_group = xEventGroupCreate();
+      | ^~~~~~~~~~~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:313:1: error: type defaults to 'int' in declaration of 'system_event_group' [-Wimplicit-int]
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:313:1: error: conflicting types for 'system_event_group'; have 'int'
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:22:20: note: previous declaration of 'system_event_group' with type 'EventGroupHandle_t' {aka 'struct EventGroupDef_t *'}
+   22 | EventGroupHandle_t system_event_group;
+      |                    ^~~~~~~~~~~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:314:1: warning: data definition has no type or storage class
+  314 | lux_queue = xQueueCreate(QUEUE_LENGTH, QUEUE_ITEM_SIZE);
+      | ^~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:314:1: error: type defaults to 'int' in declaration of 'lux_queue' [-Wimplicit-int]
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:314:1: error: conflicting types for 'lux_queue'; have 'int'
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:57:22: note: previous declaration of 'lux_queue' with type 'QueueHandle_t' {aka 'struct QueueDefinition *'}
+   57 | static QueueHandle_t lux_queue; // lux_queue
+      |                      ^~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:315:1: error: expected identifier or '(' before 'if'
+  315 | if (lux_queue == NULL)
+      | ^~
+E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_common/include/esp_err.h:115:28: error: expected identifier or '(' before 'do'
+  115 | #define ESP_ERROR_CHECK(x) do {                                         \
+      |                            ^~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:320:1: note: in expansion of macro 'ESP_ERROR_CHECK'
+  320 | ESP_ERROR_CHECK(i2c_master_init());
+      | ^~~~~~~~~~~~~~~
+E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/esp_common/include/esp_err.h:121:7: error: expected identifier or '(' before 'while'
+  121 |     } while(0)
+      |       ^~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:320:1: note: in expansion of macro 'ESP_ERROR_CHECK'
+  320 | ESP_ERROR_CHECK(i2c_master_init());
+      | ^~~~~~~~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:45:25: error: expected declaration specifiers or '...' before numeric constant
+   45 | #define BH1750_POWER_ON 0x01
+      |                         ^~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:321:18: note: in expansion of macro 'BH1750_POWER_ON'
+  321 | bh1750_write_cmd(BH1750_POWER_ON);
+      |                  ^~~~~~~~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:46:22: error: expected declaration specifiers or '...' before numeric constant
+   46 | #define BH1750_RESET 0x07
+      |                      ^~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:322:18: note: in expansion of macro 'BH1750_RESET'
+  322 | bh1750_write_cmd(BH1750_RESET);
+      |                  ^~~~~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:47:32: error: expected declaration specifiers or '...' before numeric constant
+   47 | #define BH1750_CONT_H_RES_MODE 0x10 // Chế độ đo liên tục độ phân giải cao
+      |                                ^~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:323:18: note: in expansion of macro 'BH1750_CONT_H_RES_MODE'
+  323 | bh1750_write_cmd(BH1750_CONT_H_RES_MODE);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~
+In file included from E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:5:
+E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/log/include/esp_log.h:204:54: error: expected identifier or '(' before 'do'
+  204 | #define ESP_LOG_LEVEL_LOCAL(level, tag, format, ...) do {               \
+      |                                                      ^~
+E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:324:1: note: in expansion of macro 'ESP_LOGI'
+  324 | ESP_LOGI(TAG, "Khởi tạo I2C và BH1750 thành công");
+      | ^~~~~~~~
+E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/log/include/esp_log.h:206:7: error: expected identifier or '(' before 'while'
+  206 |     } while(0)
+      |       ^~~~~
+E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2/components/log/include/esp_log.h:114:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  114 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:324:1: note: in expansion of macro 'ESP_LOGI'
+  324 | ESP_LOGI(TAG, "Khởi tạo I2C và BH1750 thành công");
+      | ^~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:325:39: error: expected ')' before string constant
+  325 | xTaskCreatePinnedToCore(Luxntime_read, "Luxntime_read", 4096, NULL, 5, NULL, 0);
+      |                                       ^~~~~~~~~~~~~~~~
+      |                                       )
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:326:1: warning: data definition has no type or storage class
+  326 | wifi_init_sta();
+      | ^~~~~~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:326:1: error: type defaults to 'int' in declaration of 'wifi_init_sta' [-Wimplicit-int]
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:326:1: error: conflicting types for 'wifi_init_sta'; have 'int()'
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:178:6: note: previous definition of 'wifi_init_sta' with type 'void()'
+  178 | void wifi_init_sta()
+      |      ^~~~~~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:330:1: warning: data definition has no type or storage class
+  330 | mqtt_start();
+      | ^~~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:330:1: error: type defaults to 'int' in declaration of 'mqtt_start' [-Wimplicit-int]
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:330:1: error: conflicting types for 'mqtt_start'; have 'int()'
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:219:6: note: previous definition of 'mqtt_start' with type 'void()'
+  219 | void mqtt_start()
+      |      ^~~~~~~~~~
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:332:43: error: expected ')' before string constant
+  332 | xTaskCreatePinnedToCore(mqtt_publish_task, "mqtt_publish_task", 8192, NULL, 6, NULL, 0);
+      |                                           ^~~~~~~~~~~~~~~~~~~~
+      |                                           )
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:333:1: error: expected identifier or '(' before '}' token
+  333 | }
+      | ^
+E:/ESP32/PRO1/ESPtoBroker/bh1750/main/main.c:83:18: warning: 'i2c_master_init' defined but not used [-Wunused-function]
+   83 | static esp_err_t i2c_master_init(void)
+      |                  ^~~~~~~~~~~~~~~
+ninja: build stopped: subcommand failed.

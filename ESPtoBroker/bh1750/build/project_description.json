@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "blink",
-    "project_version":    "1",
+    "project_version":    "c889603-dirty",
     "project_path":       "E:/ESP32/PRO1/ESPtoBroker/bh1750",
     "idf_path":           "E:/ESP32/Espressif/frameworks/esp-idf-v5.4.2",
     "build_dir":          "E:/ESP32/PRO1/ESPtoBroker/bh1750/build",
