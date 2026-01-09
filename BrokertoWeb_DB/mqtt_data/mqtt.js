@@ -1,3 +1,4 @@
+//Fake data
 import mqtt from 'mqtt';
 
 const BROKER = 'mqtt://broker.hivemq.com:1883';
